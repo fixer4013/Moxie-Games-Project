@@ -6,7 +6,7 @@ public class Flickering : MonoBehaviour
 {
     public float lightStrength;
     Light lampLight;
-    bool flickeringOn = false;
+    bool flickeringOn = true;
 
     void Start()
     {

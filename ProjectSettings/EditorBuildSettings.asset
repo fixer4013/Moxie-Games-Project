@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HotelZP11Floors.unity
+    guid: 3852f5d6e6f0dd24b8040330f4f7a1d6
   m_configObjects: {}
