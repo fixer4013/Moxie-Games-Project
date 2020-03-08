@@ -12,9 +12,17 @@ public class LookAtInteractable : MonoBehaviour
 
     public LayerMask layerInteractables;
 
-    void FixedUpdate()
+    void Update()
     {
+        LookAt();
+        if (currentObject != null)
+        {
+            Interact();
+        }
+    }
 
+    void LookAt()
+    {
         // Will contain the information of which object the raycast hit
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -29,6 +37,25 @@ public class LookAtInteractable : MonoBehaviour
         {
             currentObject = null;
         }
-        Debug.Log(currentObject);
+
+    }
+
+    void Interact()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (currentObject.tag == "Door")
+            {
+                currentObject.transform.parent.GetComponent<Interactable>().DoorOpenAnimation();
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (currentObject.tag == "Door")
+            {
+                StartCoroutine(currentObject.transform.parent.GetComponent<Interactable>().DoorListening());
+            }
+        }
     }
 }
