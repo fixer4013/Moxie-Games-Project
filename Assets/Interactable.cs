@@ -11,8 +11,10 @@ public class Interactable : MonoBehaviour
 
     public GameObject player;
     public Camera cam;
+    public GameObject keyholeCamera;
 
     public bool listening;
+    public bool peeking;
     public float timer;
     public bool isInteracting;
 
@@ -20,14 +22,16 @@ public class Interactable : MonoBehaviour
     Quaternion playerRotation;
     Quaternion cameraRotation;
 
-    Vector3 playerListenPosition;
-    Quaternion playerListenRotationLeft;
-    Quaternion playerListenRotationRight;
-    Quaternion camListenRotation;
+    Vector3 playerInteractionPosition;
+    Quaternion playerInteractionRotationLeft;
+    Quaternion playerInteractionRotationRight;
+    Quaternion playerInteractionRotationForward;
+    Quaternion camInteractionRotation;
 
     float playerPositionSpeed;
     float playerRotationSpeedLeft;
     float playerRotationSpeedRight;
+    float playerRotationSpeedForward;
     float camRotationSpeed;
 
     void Update()
@@ -41,6 +45,14 @@ public class Interactable : MonoBehaviour
             text.enabled = true;
         }
 
+        if (peeking)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCoroutine(StopPeeking());
+            }
+        }
+
         if (listening)
         {
             if (Input.GetMouseButtonDown(1))
@@ -48,6 +60,9 @@ public class Interactable : MonoBehaviour
                 StartCoroutine(StopListening());
             }
         }
+
+
+
     }
 
     public void DoorOpenAnimation()
@@ -67,12 +82,12 @@ public class Interactable : MonoBehaviour
         playerRotation = player.transform.localRotation;
         cameraRotation = cam.transform.localRotation;
 
-        playerListenPosition = door.transform.position + new Vector3(0, -0.3f, -0.5f);
-        playerListenRotationLeft = Quaternion.Euler(0, -90, 0);
-        playerListenRotationRight = Quaternion.Euler(0, 90, 0);
-        camListenRotation = Quaternion.identity;
+        playerInteractionPosition = door.transform.position + new Vector3(0, -0.3f, -0.5f);
+        playerInteractionRotationLeft = Quaternion.Euler(0, -90, 0);
+        playerInteractionRotationRight = Quaternion.Euler(0, 90, 0);
+        camInteractionRotation = Quaternion.identity;
 
-        playerPositionSpeed = Mathf.Abs(Vector3.Distance(player.transform.localPosition, playerListenPosition) / timer);
+        playerPositionSpeed = Mathf.Abs(Vector3.Distance(player.transform.localPosition, playerInteractionPosition) / timer);
         playerRotationSpeedLeft = Mathf.Abs((player.transform.localRotation.eulerAngles.y - 270) / timer);
         playerRotationSpeedRight = Mathf.Abs((player.transform.localRotation.eulerAngles.y - 90) / timer);
         if (cameraRotation.eulerAngles.x > 180)
@@ -92,17 +107,17 @@ public class Interactable : MonoBehaviour
 
         for (float i = 0; i < timer; i += Time.deltaTime)
         {
-            player.transform.localPosition = Vector3.MoveTowards(player.transform.localPosition, playerListenPosition, playerPositionSpeed * Time.deltaTime);
+            player.transform.localPosition = Vector3.MoveTowards(player.transform.localPosition, playerInteractionPosition, playerPositionSpeed * Time.deltaTime);
             if (player.transform.rotation.eulerAngles.y > 180)
             {
-                player.transform.localRotation = Quaternion.RotateTowards(player.transform.localRotation, playerListenRotationLeft, playerRotationSpeedLeft * Time.deltaTime);
+                player.transform.localRotation = Quaternion.RotateTowards(player.transform.localRotation, playerInteractionRotationLeft, playerRotationSpeedLeft * Time.deltaTime);
 
             }
             else
             {
-                player.transform.localRotation = Quaternion.RotateTowards(player.transform.localRotation, playerListenRotationRight, playerRotationSpeedRight * Time.deltaTime);
+                player.transform.localRotation = Quaternion.RotateTowards(player.transform.localRotation, playerInteractionRotationRight, playerRotationSpeedRight * Time.deltaTime);
             }
-            cam.transform.localRotation = Quaternion.RotateTowards(cam.transform.localRotation, camListenRotation, camRotationSpeed * Time.deltaTime);
+            cam.transform.localRotation = Quaternion.RotateTowards(cam.transform.localRotation, camInteractionRotation, camRotationSpeed * Time.deltaTime);
 
             yield return 0;
         }
@@ -125,6 +140,81 @@ public class Interactable : MonoBehaviour
             {
                 player.transform.localRotation = Quaternion.RotateTowards(player.transform.localRotation, playerRotation, playerRotationSpeedRight * Time.deltaTime);
             }
+            cam.transform.localRotation = Quaternion.RotateTowards(cam.transform.localRotation, cameraRotation, camRotationSpeed * Time.deltaTime);
+
+            yield return 0;
+        }
+
+        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<LookAtInteractable>().enabled = true;
+        cam.GetComponent<DimensionCamera>().enabled = true;
+
+        isInteracting = false;
+    }
+
+    public IEnumerator Peek()
+    {
+        isInteracting = true;
+
+        playerPosition = player.transform.localPosition;
+        playerRotation = player.transform.localRotation;
+        cameraRotation = cam.transform.localRotation;
+
+        playerInteractionPosition = door.transform.position + new Vector3(-0.6f, -1f, -0.5f);
+        playerInteractionRotationForward = Quaternion.identity;
+        camInteractionRotation = Quaternion.identity;
+
+        playerPositionSpeed = Mathf.Abs(Vector3.Distance(player.transform.localPosition, playerInteractionPosition) / timer);
+
+        if (player.transform.localRotation.eulerAngles.y > 180)
+        {
+            playerRotationSpeedForward = Mathf.Abs((player.transform.localRotation.eulerAngles.y - 360) / timer);
+        }
+        else
+        {
+            playerRotationSpeedForward = Mathf.Abs((player.transform.localRotation.eulerAngles.y) / timer);
+        }
+
+        if (cameraRotation.eulerAngles.x > 180)
+        {
+            camRotationSpeed = Mathf.Abs((cameraRotation.eulerAngles.x - 360) / timer);
+        }
+        else
+        {
+            camRotationSpeed = Mathf.Abs(cameraRotation.eulerAngles.x / timer);
+        }
+
+        player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<LookAtInteractable>().enabled = false;
+        cam.GetComponent<DimensionCamera>().enabled = false;
+
+
+        for (float i = 0; i < timer; i += Time.deltaTime)
+        {
+            player.transform.localPosition = Vector3.MoveTowards(player.transform.localPosition, playerInteractionPosition, playerPositionSpeed * Time.deltaTime);
+            player.transform.localRotation = Quaternion.RotateTowards(player.transform.localRotation, playerInteractionRotationForward, playerRotationSpeedForward * Time.deltaTime);
+            cam.transform.localRotation = Quaternion.RotateTowards(cam.transform.localRotation, camInteractionRotation, camRotationSpeed * Time.deltaTime);
+
+            yield return 0;
+        }
+
+        cam.gameObject.SetActive(false);
+        keyholeCamera.SetActive(true);
+        peeking = true;
+    }
+
+    IEnumerator StopPeeking()
+    {
+        peeking = false;
+        cam.gameObject.SetActive(true);
+        keyholeCamera.SetActive(false);
+
+        for (float i = 0; i < timer; i += Time.deltaTime)
+        {
+            player.transform.localPosition = Vector3.MoveTowards(player.transform.localPosition, playerPosition, playerPositionSpeed * Time.deltaTime);
+            player.transform.localRotation = Quaternion.RotateTowards(player.transform.localRotation, playerRotation, playerRotationSpeedForward * Time.deltaTime);
             cam.transform.localRotation = Quaternion.RotateTowards(cam.transform.localRotation, cameraRotation, camRotationSpeed * Time.deltaTime);
 
             yield return 0;

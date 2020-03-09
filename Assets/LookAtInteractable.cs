@@ -46,7 +46,7 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.tag == "Door")
             {
-                currentObject.transform.parent.GetComponent<Interactable>().DoorOpenAnimation();
+                StartCoroutine(currentObject.transform.parent.GetComponent<Interactable>().Peek());
             }
         }
 
@@ -56,6 +56,11 @@ public class LookAtInteractable : MonoBehaviour
             {
                 StartCoroutine(currentObject.transform.parent.GetComponent<Interactable>().DoorListening());
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            currentObject.transform.parent.GetComponent<Interactable>().DoorOpenAnimation();
         }
     }
 }
