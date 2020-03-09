@@ -14,6 +14,7 @@ public class Interactable : MonoBehaviour
 
     public bool listening;
     public float timer;
+    public bool isInteracting;
 
     Vector3 playerPosition;
     Quaternion playerRotation;
@@ -31,7 +32,7 @@ public class Interactable : MonoBehaviour
 
     void Update()
     {
-        if (LookAtInteractable.currentObject != door || listening == true)
+        if (LookAtInteractable.currentObject != door || isInteracting)
         {
             text.enabled = false;
         }
@@ -60,6 +61,8 @@ public class Interactable : MonoBehaviour
 
     public IEnumerator DoorListening()
     {
+        isInteracting = true;
+
         playerPosition = player.transform.localPosition;
         playerRotation = player.transform.localRotation;
         cameraRotation = cam.transform.localRotation;
@@ -72,15 +75,20 @@ public class Interactable : MonoBehaviour
         playerPositionSpeed = Mathf.Abs(Vector3.Distance(player.transform.localPosition, playerListenPosition) / timer);
         playerRotationSpeedLeft = Mathf.Abs((player.transform.localRotation.eulerAngles.y - 270) / timer);
         playerRotationSpeedRight = Mathf.Abs((player.transform.localRotation.eulerAngles.y - 90) / timer);
-        camRotationSpeed = Mathf.Abs(cameraRotation.eulerAngles.x / timer);
-        Debug.Log(player.transform.localRotation.eulerAngles.y);
+        if (cameraRotation.eulerAngles.x > 180)
+        {
+            camRotationSpeed = Mathf.Abs((cameraRotation.eulerAngles.x - 360) / timer);
+        }
+        else
+        {
+            camRotationSpeed = Mathf.Abs(cameraRotation.eulerAngles.x / timer);
+        }
 
         player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<LookAtInteractable>().enabled = false;
         cam.GetComponent<DimensionCamera>().enabled = false;
 
-        listening = true;
 
         for (float i = 0; i < timer; i += Time.deltaTime)
         {
@@ -98,11 +106,15 @@ public class Interactable : MonoBehaviour
 
             yield return 0;
         }
+
+        listening = true;
     }
 
     IEnumerator StopListening()
     {
-        for (float i = 0; i < 2; i += Time.deltaTime)
+        listening = false;
+
+        for (float i = 0; i < timer; i += Time.deltaTime)
         {
             player.transform.localPosition = Vector3.MoveTowards(player.transform.localPosition, playerPosition, playerPositionSpeed * Time.deltaTime);
             if (player.transform.rotation.eulerAngles.y > 180)
@@ -122,6 +134,7 @@ public class Interactable : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = true;
         player.GetComponent<LookAtInteractable>().enabled = true;
         cam.GetComponent<DimensionCamera>().enabled = true;
-        listening = false;
+
+        isInteracting = false;
     }
 }

@@ -8,7 +8,6 @@ public class CloseDoor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("test");
         if (collision.gameObject.tag == "Player")
         {
             anim.Play("CloseDoor");
@@ -18,7 +17,6 @@ public class CloseDoor : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("test");
         if (other.tag == "Player")
         {
             anim.Play("DoorClose");
