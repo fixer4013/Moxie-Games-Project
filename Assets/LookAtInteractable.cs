@@ -60,7 +60,10 @@ public class LookAtInteractable : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            currentObject.transform.parent.GetComponent<Interactable>().DoorOpenAnimation();
+            if (currentObject.transform.parent.GetComponent<Interactable>())
+            {
+                currentObject.transform.parent.GetComponent<Interactable>().DoorOpenAnimation();
+            }
         }
     }
 }
