@@ -7,11 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Slider staminaBar;
+    public AudioSource audio;
 
     public float walkSpeed = 3f;
     public float sprintSpeed = 6f;
     public float speed;
     float gravity = -10f;
+    public float x;
+    public float z;
 
     //public float rechargeStaminaSpeed;
     //bool isRecharging;
@@ -19,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
 
