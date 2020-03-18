@@ -11,23 +11,27 @@ public class FootstepsSound : MonoBehaviour
 
     void Update()
     {
-        if (player.x != 0 || player.z != 0)
+        if (player)
         {
-            isStoppingAudio = false;
-            audioS.volume = 1;
-            if (!audioS.isPlaying)
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                audioS.Play();
-                StopAllCoroutines();
+                isStoppingAudio = false;
+                audioS.volume = 1;
+                if (!audioS.isPlaying)
+                {
+                    audioS.Play();
+                    StopAllCoroutines();
+                }
+            }
+            else
+            {
+                if (!isStoppingAudio)
+                {
+                    StartCoroutine(StopAudio());
+                }
             }
         }
-        else
-        {
-            if (!isStoppingAudio)
-            {
-                StartCoroutine(StopAudio());
-            }
-        }
+
     }
 
     IEnumerator StopAudio()
