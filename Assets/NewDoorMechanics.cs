@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NewDoorMechanics : MonoBehaviour
 {
 
     public GameObject player;
+    public NavMeshAgent enemy;
 
     //DOOR OPENING AND CLOSING MECHANICS
     public Animator anim;
     public float closingDistance;
     public bool doorAnimating;
     public bool open;
+
+    //DOOR OPENING MECHANICS ENEMY
+    public bool enemyIsNear;
 
     //PEEKING AND LISTENING MECHANICS
     public DoorSide side1;
@@ -41,11 +46,18 @@ public class NewDoorMechanics : MonoBehaviour
 
     private void Update()
     {
+
         //DOOR OPENING AND CLOSING MECHANICS
-        if (open && Vector3.Distance(transform.position, player.transform.position) > closingDistance)
+        if (open && !side1.isPlayerNear && !side2.isPlayerNear && !enemyIsNear)
         {
             StartCoroutine(DoorCloseAnimation());
         }
+
+        if (!open && !doorAnimating && enemyIsNear)
+        {
+            StartCoroutine(DoorOpenAnimation(0.33f, true));
+        }
+        enemyIsNear = false;
 
         //PEEKING MECHANICS
         if (peeking)
@@ -69,13 +81,25 @@ public class NewDoorMechanics : MonoBehaviour
 
 
     //DOOR OPENING AND CLOSING MECHANICS
-    public IEnumerator DoorOpenAnimation()
+    public IEnumerator DoorOpenAnimation(float animSpeed, bool isEnemy)
     {
         anim.Play("DoorOpenNew1");
+        var currentAnimSpeed = anim.speed;
+        anim.speed = animSpeed;
         doorAnimating = true;
-        yield return new WaitForSeconds(2f);
+        if (isEnemy)
+        {
+            enemy.speed = 0;
+        }
+
+        yield return new WaitForSeconds(2f / animSpeed);
         open = true;
         doorAnimating = false;
+        anim.speed = currentAnimSpeed;
+        if (isEnemy)
+        {
+            enemy.speed = 3.5f;
+        }
     }
 
     //DOOR OPENING AND CLOSING MECHANICS
@@ -86,7 +110,8 @@ public class NewDoorMechanics : MonoBehaviour
         open = false;
         yield return new WaitForSeconds(2f);
         doorAnimating = false;
-    }
+    }    
+    
 
     //PEEKING MECHANICS ON 1 SIDE OF THE DOOR
     public IEnumerator PeekingSide1()
