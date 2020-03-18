@@ -6,6 +6,8 @@ public class FootstepsSound : MonoBehaviour
 {
     public PlayerMovement player;
     public AudioSource audioS;
+    public AudioClip walking;
+    public AudioClip running;
     bool isStoppingAudio;
     // Update is called once per frame
 
@@ -15,6 +17,15 @@ public class FootstepsSound : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
+                if (!player.sprinting)
+                {
+                    audioS.clip = walking;
+                }
+                else
+                {
+                    audioS.clip = running;
+                }
+
                 isStoppingAudio = false;
                 audioS.volume = 1;
                 if (!audioS.isPlaying)

@@ -13,8 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed = 6f;
     public float speed;
     float gravity = -10f;
-    public float x;
-    public float z;
+    public bool sprinting;
 
     //public float rechargeStaminaSpeed;
     //bool isRecharging;
@@ -22,19 +21,21 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        x = Input.GetAxis("Horizontal");
-        z = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            sprinting = true;
             speed = sprintSpeed;
             //StopAllCoroutines();
             //isRecharging = false;
         }
         else
         {
+            sprinting = false;
             speed = walkSpeed;
             //if (!isRecharging)
             //{

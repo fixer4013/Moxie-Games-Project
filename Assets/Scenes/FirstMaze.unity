@@ -8999,10 +8999,9 @@ MonoBehaviour:
   staminaBar: {fileID: 26563361}
   audio: {fileID: 1612533444}
   walkSpeed: 3
-  sprintSpeed: 12
+  sprintSpeed: 6
   speed: 4
-  x: 0
-  z: 0
+  sprinting: 0
 --- !u!4 &715695087
 Transform:
   m_ObjectHideFlags: 0
@@ -17902,6 +17901,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 715695086}
   audioS: {fileID: 1612533444}
+  walking: {fileID: 8300000, guid: 65a4b68f3e38a924ea5dc7663e8e8f33, type: 3}
+  running: {fileID: 8300000, guid: cdb738ca570424f44938b1e02d450d13, type: 3}
 --- !u!1 &1628099803
 GameObject:
   m_ObjectHideFlags: 0
