@@ -1492,6 +1492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 124765725}
+  - component: {fileID: 124765727}
   - component: {fileID: 124765726}
   m_Layer: 0
   m_Name: Audio
@@ -1646,6 +1647,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &124765727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124765724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 273863493}
+  audioS: {fileID: 124765726}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &125495088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,6 +1966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 1759188273}
   ceilingLight: {fileID: 1524734702}
+  roomCondition: 0
 --- !u!65 &136561383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2101,6 +2119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 1964205090}
   ceilingLight: {fileID: 1243130937}
+  roomCondition: 0
 --- !u!65 &149012605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2963,6 +2982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 209948647}
+  - component: {fileID: 209948649}
   - component: {fileID: 209948648}
   m_Layer: 0
   m_Name: Audio
@@ -3117,6 +3137,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &209948649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209948646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 992303794}
+  audioS: {fileID: 209948648}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &214049209
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,6 +3231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 302826512}
   ceilingLight: {fileID: 911879453}
+  roomCondition: 0
 --- !u!65 &233089694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3315,6 +3352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 255488478}
+  - component: {fileID: 255488480}
   - component: {fileID: 255488479}
   m_Layer: 0
   m_Name: Audio
@@ -3469,6 +3507,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &255488480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255488477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 299655569}
+  audioS: {fileID: 255488479}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &273863491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,6 +3571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 124765726}
   ceilingLight: {fileID: 1768625055}
+  roomCondition: 0
 --- !u!65 &273863494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4334,6 +4389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 1636745269}
   ceilingLight: {fileID: 308848642}
+  roomCondition: 0
 --- !u!65 &289272627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4395,6 +4451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 255488479}
   ceilingLight: {fileID: 407081765}
+  roomCondition: 0
 --- !u!65 &299655570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4417,6 +4474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 302826511}
+  - component: {fileID: 302826513}
   - component: {fileID: 302826512}
   m_Layer: 0
   m_Name: Audio
@@ -4571,6 +4629,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &302826513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302826510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 233089693}
+  audioS: {fileID: 302826512}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &306921132
 GameObject:
   m_ObjectHideFlags: 0
@@ -6357,6 +6431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 382446673}
+  - component: {fileID: 382446675}
   - component: {fileID: 382446674}
   m_Layer: 0
   m_Name: Audio
@@ -6511,6 +6586,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &382446675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382446672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1854080518}
+  audioS: {fileID: 382446674}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &383253527
 GameObject:
   m_ObjectHideFlags: 0
@@ -8746,6 +8837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 1678077890}
   ceilingLight: {fileID: 469486388}
+  roomCondition: 0
 --- !u!65 &548293496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11468,7 +11560,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 715695085}
   staminaBar: {fileID: 26563361}
-  audio: {fileID: 1612533444}
   walkSpeed: 3
   sprintSpeed: 6
   speed: 4
@@ -13942,6 +14033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915840960}
+  - component: {fileID: 915840962}
   - component: {fileID: 915840961}
   m_Layer: 0
   m_Name: Audio
@@ -14096,6 +14188,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &915840962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915840959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1846521652}
+  audioS: {fileID: 915840961}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &919261756
 GameObject:
   m_ObjectHideFlags: 0
@@ -14227,6 +14335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 927832320}
+  - component: {fileID: 927832322}
   - component: {fileID: 927832321}
   m_Layer: 0
   m_Name: Audio
@@ -14381,6 +14490,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &927832322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927832319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1835481096}
+  audioS: {fileID: 927832321}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &933467612
 GameObject:
   m_ObjectHideFlags: 0
@@ -15038,6 +15163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 209948648}
   ceilingLight: {fileID: 83833650}
+  roomCondition: 0
 --- !u!65 &992303795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16844,6 +16970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 2032614295}
   ceilingLight: {fileID: 136912298}
+  roomCondition: 0
 --- !u!65 &1145518126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17011,6 +17138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 1182529441}
   ceilingLight: {fileID: 284565682}
+  roomCondition: 0
 --- !u!65 &1150627023
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17226,6 +17354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 1716273722}
   ceilingLight: {fileID: 680378914}
+  roomCondition: 0
 --- !u!65 &1173466620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17278,6 +17407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1182529440}
+  - component: {fileID: 1182529442}
   - component: {fileID: 1182529441}
   m_Layer: 0
   m_Name: Audio
@@ -17432,6 +17562,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1182529442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182529439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1150627022}
+  audioS: {fileID: 1182529441}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &1192667542
 GameObject:
   m_ObjectHideFlags: 0
@@ -19036,6 +19182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 2081383516}
   ceilingLight: {fileID: 277807411}
+  roomCondition: 0
 --- !u!65 &1367296793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20370,6 +20517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1477376791}
+  - component: {fileID: 1477376793}
   - component: {fileID: 1477376792}
   m_Layer: 0
   m_Name: Audio
@@ -20524,6 +20672,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1477376793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477376790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1725034794}
+  audioS: {fileID: 1477376792}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &1480162781
 GameObject:
   m_ObjectHideFlags: 0
@@ -23089,6 +23253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1636745268}
+  - component: {fileID: 1636745270}
   - component: {fileID: 1636745269}
   m_Layer: 0
   m_Name: Audio
@@ -23243,6 +23408,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1636745270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636745267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 289272626}
+  audioS: {fileID: 1636745269}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &1639999632
 GameObject:
   m_ObjectHideFlags: 0
@@ -23874,6 +24055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678077889}
+  - component: {fileID: 1678077891}
   - component: {fileID: 1678077890}
   m_Layer: 0
   m_Name: Audio
@@ -24028,6 +24210,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1678077891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678077888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 548293495}
+  audioS: {fileID: 1678077890}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &1697851687
 GameObject:
   m_ObjectHideFlags: 0
@@ -24471,6 +24669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1716273721}
+  - component: {fileID: 1716273723}
   - component: {fileID: 1716273722}
   m_Layer: 0
   m_Name: Audio
@@ -24625,6 +24824,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1716273723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716273720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1173466619}
+  audioS: {fileID: 1716273722}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &1724265484
 GameObject:
   m_ObjectHideFlags: 0
@@ -24703,6 +24918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 1477376792}
   ceilingLight: {fileID: 316770218}
+  roomCondition: 0
 --- !u!65 &1725034795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24764,6 +24980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 2103144576}
   ceilingLight: {fileID: 1285636034}
+  roomCondition: 0
 --- !u!65 &1728761543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25412,6 +25629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1759188272}
+  - component: {fileID: 1759188274}
   - component: {fileID: 1759188273}
   m_Layer: 0
   m_Name: Audio
@@ -25566,6 +25784,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1759188274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759188271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 136561382}
+  audioS: {fileID: 1759188273}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &1759258053
 GameObject:
   m_ObjectHideFlags: 0
@@ -26290,6 +26524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 927832321}
   ceilingLight: {fileID: 55619663}
+  roomCondition: 0
 --- !u!65 &1835481097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26443,6 +26678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 915840961}
   ceilingLight: {fileID: 1411515931}
+  roomCondition: 0
 --- !u!65 &1846521653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26504,6 +26740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 382446674}
   ceilingLight: {fileID: 1152942275}
+  roomCondition: 0
 --- !u!65 &1854080519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28174,6 +28411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1964205089}
+  - component: {fileID: 1964205091}
   - component: {fileID: 1964205090}
   m_Layer: 0
   m_Name: Audio
@@ -28328,6 +28566,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1964205091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964205088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 149012604}
+  audioS: {fileID: 1964205090}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &1974369432
 GameObject:
   m_ObjectHideFlags: 0
@@ -28854,6 +29108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2032614294}
+  - component: {fileID: 2032614296}
   - component: {fileID: 2032614295}
   m_Layer: 0
   m_Name: Audio
@@ -29008,6 +29263,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2032614296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032614293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1145518125}
+  audioS: {fileID: 2032614295}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &2039436494
 GameObject:
   m_ObjectHideFlags: 0
@@ -29382,6 +29653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2081383515}
+  - component: {fileID: 2081383517}
   - component: {fileID: 2081383516}
   m_Layer: 0
   m_Name: Audio
@@ -29536,6 +29808,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2081383517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081383514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1367296792}
+  audioS: {fileID: 2081383516}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &2081854055
 GameObject:
   m_ObjectHideFlags: 0
@@ -29912,6 +30200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2103144575}
+  - component: {fileID: 2103144577}
   - component: {fileID: 2103144576}
   m_Layer: 0
   m_Name: Audio
@@ -30066,6 +30355,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2103144577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103144574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 1728761542}
+  audioS: {fileID: 2103144576}
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!1 &2103632350
 GameObject:
   m_ObjectHideFlags: 0
