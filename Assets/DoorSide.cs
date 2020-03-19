@@ -9,7 +9,13 @@ public class DoorSide : MonoBehaviour
     public Transform PeekingTransform;
     public Transform ListeningTransformLeft;
     public Transform ListeningTransformRight;
+    public GameObject roomOnTheOtherSide;
+    AudioSource roomAudio;
 
+    void Awake()
+    {
+        roomAudio = roomOnTheOtherSide.GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
