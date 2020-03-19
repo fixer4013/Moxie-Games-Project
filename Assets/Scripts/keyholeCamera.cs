@@ -9,6 +9,13 @@ public class keyholeCamera : MonoBehaviour
     float xRotation = 0f;
     float yRotation = 0f;
 
+    float startingRotationY;
+
+    private void Start()
+    {
+        startingRotationY = transform.localEulerAngles.y;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +29,6 @@ public class keyholeCamera : MonoBehaviour
         yRotation = Mathf.Clamp(yRotation, -20f, 20f);
 
 
-        transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        transform.localRotation = Quaternion.Euler(xRotation, yRotation + startingRotationY, 0f);
     }
 }

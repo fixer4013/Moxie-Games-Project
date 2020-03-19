@@ -10,9 +10,11 @@ public class AIMaze : MonoBehaviour
     public Transform[] targets;
     Transform currentTarget;
     bool choosePath;
+    public float maxSpeed;
 
     private void Start()
     {
+        maxSpeed = agent.speed;
         ChooseTarget();
     }
 

@@ -90,6 +90,7 @@ public class NewDoorMechanics : MonoBehaviour
         var currentAnimSpeed = anim.speed;
         anim.speed = animSpeed;
         doorAnimating = true;
+
         if (isEnemy)
         {
             enemy.speed = 0;
@@ -101,7 +102,7 @@ public class NewDoorMechanics : MonoBehaviour
         anim.speed = currentAnimSpeed;
         if (isEnemy)
         {
-            enemy.speed = 3.5f;
+            enemy.speed = enemy.GetComponent<AIMaze>().maxSpeed;
         }
     }
 
@@ -191,7 +192,7 @@ public class NewDoorMechanics : MonoBehaviour
         //SET POSITION FOR THE PLAYER AND CAMERA TO GO TO
         playerInteractionPosition = side2.PeekingTransform.position;
         playerInteractionRotationPeeking = side2.PeekingTransform.rotation;
-        camInteractionRotation = side2.PeekingTransform.rotation;
+        camInteractionRotation = Quaternion.identity;
 
         //MOVING SPEEDS
         playerPositionSpeed = Mathf.Abs(Vector3.Distance(player.transform.position, playerInteractionPosition) / timer);
