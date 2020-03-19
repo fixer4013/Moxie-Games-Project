@@ -18,6 +18,9 @@ public class NewDoorMechanics : MonoBehaviour
     //DOOR OPENING MECHANICS ENEMY
     public bool enemyIsNear;
 
+    //KNOCKING MECHANICS
+    public AudioSource knockingAudio;
+
     //PEEKING AND LISTENING MECHANICS
     public DoorSide side1;
     public DoorSide side2;
@@ -110,7 +113,16 @@ public class NewDoorMechanics : MonoBehaviour
         open = false;
         yield return new WaitForSeconds(2f);
         doorAnimating = false;
-    }    
+    }  
+    
+    //KNOCKING MECHANICS
+    public void Knocking()
+    {
+        if (!knockingAudio.isPlaying)
+        {
+            knockingAudio.Play();
+        }
+    }
     
 
     //PEEKING MECHANICS ON 1 SIDE OF THE DOOR

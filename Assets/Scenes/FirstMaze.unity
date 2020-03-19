@@ -1684,7 +1684,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2530,6 +2530,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1862300663}
   side1: {fileID: 1933697897}
   side2: {fileID: 1512954275}
   cam: {fileID: 1730973681}
@@ -2592,6 +2593,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 724030663}
   side1: {fileID: 1465597400}
   side2: {fileID: 1760744660}
   cam: {fileID: 1730973681}
@@ -4955,6 +4957,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1894175029}
   side1: {fileID: 1494136420}
   side2: {fileID: 575890423}
   cam: {fileID: 1730973681}
@@ -6978,6 +6981,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1551201248}
   side1: {fileID: 788924731}
   side2: {fileID: 50649167}
   cam: {fileID: 1730973681}
@@ -7286,7 +7290,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9684,7 +9688,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10239,7 +10243,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10600,7 +10604,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -11580,7 +11584,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -11803,7 +11807,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12475,7 +12479,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12776,6 +12780,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1659567565}
   side1: {fileID: 1639999633}
   side2: {fileID: 25599804}
   cam: {fileID: 1730973681}
@@ -13135,6 +13140,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 793209950}
   side1: {fileID: 325131339}
   side2: {fileID: 1318468230}
   cam: {fileID: 1730973681}
@@ -15398,7 +15404,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -16141,6 +16147,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1471001661}
   side1: {fileID: 722331627}
   side2: {fileID: 751181594}
   cam: {fileID: 1730973681}
@@ -16378,6 +16385,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 616411102}
   side1: {fileID: 984683793}
   side2: {fileID: 663596835}
   cam: {fileID: 1730973681}
@@ -16500,6 +16508,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1564175145}
   side1: {fileID: 944724962}
   side2: {fileID: 630274188}
   cam: {fileID: 1730973681}
@@ -17121,6 +17130,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 665857746}
   side1: {fileID: 1885474842}
   side2: {fileID: 1507403449}
   cam: {fileID: 1730973681}
@@ -18215,6 +18225,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 125495090}
   side1: {fileID: 28593403}
   side2: {fileID: 2103632351}
   cam: {fileID: 1730973681}
@@ -19394,7 +19405,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -19653,6 +19664,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 730538347}
   side1: {fileID: 1205938439}
   side2: {fileID: 613875570}
   cam: {fileID: 1730973681}
@@ -20193,7 +20205,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -21602,7 +21614,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -21896,7 +21908,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -22527,6 +22539,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1029989386}
   side1: {fileID: 254359650}
   side2: {fileID: 379485861}
   cam: {fileID: 1730973681}
@@ -23478,7 +23491,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -23645,6 +23658,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1701861918}
   side1: {fileID: 2131914223}
   side2: {fileID: 490566902}
   cam: {fileID: 1730973681}
@@ -24055,7 +24069,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -25118,6 +25132,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 438490677}
   side1: {fileID: 1729222380}
   side2: {fileID: 1579334589}
   cam: {fileID: 1730973681}
@@ -26540,7 +26555,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26707,6 +26722,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 654278410}
   side1: {fileID: 203460169}
   side2: {fileID: 1114785164}
   cam: {fileID: 1730973681}
@@ -26861,6 +26877,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 1419401847}
   side1: {fileID: 1794923740}
   side2: {fileID: 447489653}
   cam: {fileID: 1730973681}
@@ -27375,7 +27392,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -28552,6 +28569,7 @@ MonoBehaviour:
   doorAnimating: 0
   open: 0
   enemyIsNear: 0
+  knockingAudio: {fileID: 2094846851}
   side1: {fileID: 647089440}
   side2: {fileID: 1396987987}
   cam: {fileID: 1730973681}
@@ -29627,7 +29645,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36749c2506bc7bc4e9046060e91a3cdb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -54,6 +54,15 @@ public class LookAtInteractable : MonoBehaviour
                 StartCoroutine(currentObject.GetComponent<PhysicalDoor>().ndm.DoorOpenAnimation(1f, false));
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (currentObject.GetComponent<PhysicalDoor>())
+            {
+                currentObject.GetComponent<PhysicalDoor>().ndm.Knocking();
+            }
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             if (currentObject.GetComponent<PhysicalDoor>())
