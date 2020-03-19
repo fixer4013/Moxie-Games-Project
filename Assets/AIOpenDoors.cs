@@ -14,7 +14,10 @@ public class AIOpenDoors : MonoBehaviour
 
         if (test.Length != 0)
         {
-            test[0].gameObject.GetComponent<PhysicalDoor>().ndm.enemyIsNear = true;
+            for (int i = 0; i < test.Length; i++)
+            {
+                test[i].gameObject.GetComponent<PhysicalDoor>().ndm.enemyIsNear = true;
+            }
         }
     }
 }

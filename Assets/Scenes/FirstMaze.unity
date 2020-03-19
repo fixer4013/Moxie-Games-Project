@@ -262,6 +262,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 200207272}
   ListeningTransformRight: {fileID: 113946908}
   roomOnTheOtherSide: {fileID: 548293493}
+  roomAudio: {fileID: 0}
 --- !u!4 &25599805
 Transform:
   m_ObjectHideFlags: 0
@@ -416,6 +417,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1655639501}
   ListeningTransformRight: {fileID: 1461188271}
   roomOnTheOtherSide: {fileID: 548293493}
+  roomAudio: {fileID: 0}
 --- !u!4 &28593404
 Transform:
   m_ObjectHideFlags: 0
@@ -575,6 +577,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1977766355}
   ListeningTransformRight: {fileID: 685867568}
   roomOnTheOtherSide: {fileID: 1846521650}
+  roomAudio: {fileID: 0}
 --- !u!4 &50649168
 Transform:
   m_ObjectHideFlags: 0
@@ -2767,6 +2770,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1051542015}
   ListeningTransformRight: {fileID: 1019565316}
   roomOnTheOtherSide: {fileID: 136561380}
+  roomAudio: {fileID: 0}
 --- !u!4 &203460170
 Transform:
   m_ObjectHideFlags: 0
@@ -3270,6 +3274,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1222157533}
   ListeningTransformRight: {fileID: 1224751482}
   roomOnTheOtherSide: {fileID: 149012602}
+  roomAudio: {fileID: 0}
 --- !u!4 &254359651
 Transform:
   m_ObjectHideFlags: 0
@@ -5133,6 +5138,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 238515577}
   ListeningTransformRight: {fileID: 1202646559}
   roomOnTheOtherSide: {fileID: 1725034792}
+  roomAudio: {fileID: 0}
 --- !u!4 &325131340
 Transform:
   m_ObjectHideFlags: 0
@@ -6310,6 +6316,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1578251096}
   ListeningTransformRight: {fileID: 1064596936}
   roomOnTheOtherSide: {fileID: 1145518123}
+  roomAudio: {fileID: 0}
 --- !u!4 &379485862
 Transform:
   m_ObjectHideFlags: 0
@@ -7632,6 +7639,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 177186293}
   ListeningTransformRight: {fileID: 958498732}
   roomOnTheOtherSide: {fileID: 149012602}
+  roomAudio: {fileID: 0}
 --- !u!4 &447489654
 Transform:
   m_ObjectHideFlags: 0
@@ -8148,6 +8156,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1759258054}
   ListeningTransformRight: {fileID: 1447388312}
   roomOnTheOtherSide: {fileID: 992303792}
+  roomAudio: {fileID: 0}
 --- !u!4 &490566903
 Transform:
   m_ObjectHideFlags: 0
@@ -9217,6 +9226,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 393685067}
   ListeningTransformRight: {fileID: 2063304159}
   roomOnTheOtherSide: {fileID: 1367296790}
+  roomAudio: {fileID: 0}
 --- !u!4 &575890424
 Transform:
   m_ObjectHideFlags: 0
@@ -9616,6 +9626,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1948244086}
   ListeningTransformRight: {fileID: 355981287}
   roomOnTheOtherSide: {fileID: 289272624}
+  roomAudio: {fileID: 0}
 --- !u!4 &613875571
 Transform:
   m_ObjectHideFlags: 0
@@ -9885,6 +9896,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 705916903}
   ListeningTransformRight: {fileID: 1882870151}
   roomOnTheOtherSide: {fileID: 1854080516}
+  roomAudio: {fileID: 0}
 --- !u!4 &630274189
 Transform:
   m_ObjectHideFlags: 0
@@ -10171,6 +10183,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 933467613}
   ListeningTransformRight: {fileID: 202934543}
   roomOnTheOtherSide: {fileID: 1367296790}
+  roomAudio: {fileID: 0}
 --- !u!4 &647089441
 Transform:
   m_ObjectHideFlags: 0
@@ -10532,6 +10545,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 288079909}
   ListeningTransformRight: {fileID: 1119824024}
   roomOnTheOtherSide: {fileID: 233089691}
+  roomAudio: {fileID: 0}
 --- !u!4 &663596836
 Transform:
   m_ObjectHideFlags: 0
@@ -11459,6 +11473,7 @@ MonoBehaviour:
   sprintSpeed: 6
   speed: 4
   sprinting: 0
+  rechargeStaminaSpeed: 10
 --- !u!4 &715695087
 Transform:
   m_ObjectHideFlags: 0
@@ -11512,6 +11527,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1856661150}
   ListeningTransformRight: {fileID: 1652481850}
   roomOnTheOtherSide: {fileID: 1728761540}
+  roomAudio: {fileID: 0}
 --- !u!4 &722331628
 Transform:
   m_ObjectHideFlags: 0
@@ -12218,6 +12234,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 2108877752}
   ListeningTransformRight: {fileID: 123335457}
   roomOnTheOtherSide: {fileID: 1173466617}
+  roomAudio: {fileID: 0}
 --- !u!4 &751181595
 Transform:
   m_ObjectHideFlags: 0
@@ -12407,6 +12424,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1336224990}
   ListeningTransformRight: {fileID: 1024524399}
   roomOnTheOtherSide: {fileID: 1854080516}
+  roomAudio: {fileID: 0}
 --- !u!4 &788924732
 Transform:
   m_ObjectHideFlags: 0
@@ -14632,6 +14650,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1214965519}
   ListeningTransformRight: {fileID: 2046292603}
   roomOnTheOtherSide: {fileID: 136561380}
+  roomAudio: {fileID: 0}
 --- !u!4 &944724963
 Transform:
   m_ObjectHideFlags: 0
@@ -14939,6 +14958,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1869793693}
   ListeningTransformRight: {fileID: 2122063178}
   roomOnTheOtherSide: {fileID: 149012602}
+  roomAudio: {fileID: 0}
 --- !u!4 &984683794
 Transform:
   m_ObjectHideFlags: 0
@@ -16571,6 +16591,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1074240933}
   ListeningTransformRight: {fileID: 1307134212}
   roomOnTheOtherSide: {fileID: 273863491}
+  roomAudio: {fileID: 0}
 --- !u!4 &1114785165
 Transform:
   m_ObjectHideFlags: 0
@@ -17629,6 +17650,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 87272619}
   ListeningTransformRight: {fileID: 734143266}
   roomOnTheOtherSide: {fileID: 273863491}
+  roomAudio: {fileID: 0}
 --- !u!4 &1205938440
 Transform:
   m_ObjectHideFlags: 0
@@ -18791,6 +18813,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1755082170}
   ListeningTransformRight: {fileID: 469675774}
   roomOnTheOtherSide: {fileID: 299655567}
+  roomAudio: {fileID: 0}
 --- !u!4 &1318468231
 Transform:
   m_ObjectHideFlags: 0
@@ -19184,6 +19207,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1936523488}
   ListeningTransformRight: {fileID: 545388649}
   roomOnTheOtherSide: {fileID: 992303792}
+  roomAudio: {fileID: 0}
 --- !u!4 &1396987988
 Transform:
   m_ObjectHideFlags: 0
@@ -20073,6 +20097,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 320048277}
   ListeningTransformRight: {fileID: 629087583}
   roomOnTheOtherSide: {fileID: 1846521650}
+  roomAudio: {fileID: 0}
 --- !u!4 &1465597401
 Transform:
   m_ObjectHideFlags: 0
@@ -20571,6 +20596,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 205794764}
   ListeningTransformRight: {fileID: 1833375911}
   roomOnTheOtherSide: {fileID: 992303792}
+  roomAudio: {fileID: 0}
 --- !u!4 &1494136421
 Transform:
   m_ObjectHideFlags: 0
@@ -20721,6 +20747,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 949779173}
   ListeningTransformRight: {fileID: 943807697}
   roomOnTheOtherSide: {fileID: 1150627020}
+  roomAudio: {fileID: 0}
 --- !u!4 &1507403450
 Transform:
   m_ObjectHideFlags: 0
@@ -20818,6 +20845,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1978715659}
   ListeningTransformRight: {fileID: 151740751}
   roomOnTheOtherSide: {fileID: 1728761540}
+  roomAudio: {fileID: 0}
 --- !u!4 &1512954276
 Transform:
   m_ObjectHideFlags: 0
@@ -22255,6 +22283,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 203723774}
   ListeningTransformRight: {fileID: 635854213}
   roomOnTheOtherSide: {fileID: 1173466617}
+  roomAudio: {fileID: 0}
 --- !u!4 &1579334590
 Transform:
   m_ObjectHideFlags: 0
@@ -23250,6 +23279,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 2029669245}
   ListeningTransformRight: {fileID: 1548888442}
   roomOnTheOtherSide: {fileID: 1145518123}
+  roomAudio: {fileID: 0}
 --- !u!4 &1639999634
 Transform:
   m_ObjectHideFlags: 0
@@ -24783,6 +24813,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 936246719}
   ListeningTransformRight: {fileID: 342335162}
   roomOnTheOtherSide: {fileID: 1835481094}
+  roomAudio: {fileID: 0}
 --- !u!4 &1729222381
 Transform:
   m_ObjectHideFlags: 0
@@ -25601,6 +25632,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 383925676}
   ListeningTransformRight: {fileID: 1194705947}
   roomOnTheOtherSide: {fileID: 992303792}
+  roomAudio: {fileID: 0}
 --- !u!4 &1760744661
 Transform:
   m_ObjectHideFlags: 0
@@ -25810,6 +25842,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 284456918}
   ListeningTransformRight: {fileID: 734575974}
   roomOnTheOtherSide: {fileID: 273863491}
+  roomAudio: {fileID: 0}
 --- !u!4 &1794923741
 Transform:
   m_ObjectHideFlags: 0
@@ -27290,6 +27323,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1107296844}
   ListeningTransformRight: {fileID: 465740080}
   roomOnTheOtherSide: {fileID: 1846521650}
+  roomAudio: {fileID: 0}
 --- !u!4 &1885474843
 Transform:
   m_ObjectHideFlags: 0
@@ -27889,6 +27923,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 1466247076}
   ListeningTransformRight: {fileID: 2067758109}
   roomOnTheOtherSide: {fileID: 1150627020}
+  roomAudio: {fileID: 0}
 --- !u!4 &1933697898
 Transform:
   m_ObjectHideFlags: 0
@@ -30067,6 +30102,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 355450742}
   ListeningTransformRight: {fileID: 1176549877}
   roomOnTheOtherSide: {fileID: 1835481094}
+  roomAudio: {fileID: 0}
 --- !u!4 &2103632352
 Transform:
   m_ObjectHideFlags: 0
@@ -30252,6 +30288,7 @@ MonoBehaviour:
   ListeningTransformLeft: {fileID: 310552763}
   ListeningTransformRight: {fileID: 1394164188}
   roomOnTheOtherSide: {fileID: 299655567}
+  roomAudio: {fileID: 0}
 --- !u!4 &2131914224
 Transform:
   m_ObjectHideFlags: 0
