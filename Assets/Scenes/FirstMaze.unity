@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 63755520}
   - component: {fileID: 63755519}
   - component: {fileID: 63755518}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2559,7 +2559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 1964205090}
   ceilingLight: {fileID: 1243130937}
-  roomCondition: 1
+  roomCondition: 2
   ai: {fileID: 348466542}
   nav: {fileID: 348466543}
 --- !u!65 &149012605
@@ -14451,7 +14451,7 @@ GameObject:
   - component: {fileID: 715695085}
   - component: {fileID: 715695084}
   - component: {fileID: 715695083}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -28519,7 +28519,7 @@ GameObject:
   - component: {fileID: 1612533443}
   - component: {fileID: 1612533444}
   - component: {fileID: 1612533445}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: FootSteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35047,7 +35047,7 @@ MonoBehaviour:
   room: {fileID: 149012604}
   audioS: {fileID: 1964205090}
   goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  badSound: {fileID: 8300000, guid: 0bea3faa4890d194e8bbf628c16cfeca, type: 3}
 --- !u!1 &1966142346
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ public class AIOpenDoors : MonoBehaviour
     void Update()
     {
         var test = Physics.OverlapSphere(transform.position, openDoorsRadius, doorsMiddleLayer);
-
         if (test.Length != 0)
         {
             for (int i = 0; i < test.Length; i++)

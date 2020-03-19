@@ -65,7 +65,7 @@ public class NewDoorMechanics : MonoBehaviour
         //PEEKING MECHANICS
         if (peeking)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || doorAnimating)
             {
                 StartCoroutine(StopPeeking());
             }
@@ -74,7 +74,7 @@ public class NewDoorMechanics : MonoBehaviour
         //LISTENING MECHANICS
         if (listening)
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) || doorAnimating)
             {
                 StartCoroutine(StopListening());
             }
