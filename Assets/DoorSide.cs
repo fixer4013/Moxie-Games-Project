@@ -10,11 +10,11 @@ public class DoorSide : MonoBehaviour
     public Transform ListeningTransformLeft;
     public Transform ListeningTransformRight;
     public GameObject roomOnTheOtherSide;
-    AudioSource roomAudio;
+    public AudioSource roomAudio;
 
     void Awake()
     {
-        roomAudio = roomOnTheOtherSide.GetComponent<AudioSource>();
+        roomAudio = roomOnTheOtherSide.GetComponent<Rooms>().audioS;
     }
 
     private void OnTriggerEnter(Collider other)

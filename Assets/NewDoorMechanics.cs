@@ -302,12 +302,16 @@ public class NewDoorMechanics : MonoBehaviour
         player.GetComponent<LookAtInteractable>().enabled = false;
         cam.GetComponent<DimensionCamera>().enabled = false;
 
+        //PLAY AUDIO
+        side1.roomAudio.Play();
+
         //MOVE PLAYER AND CAMERA
         for (float i = 0; i < timer; i += Time.deltaTime)
         {
             player.transform.position = Vector3.MoveTowards(player.transform.position, playerInteractionPosition, playerPositionSpeed * Time.deltaTime);
             player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, playerInteractionRotationListening, playerRotationSpeedListening * Time.deltaTime);
             cam.transform.localRotation = Quaternion.RotateTowards(cam.transform.localRotation, camInteractionRotation, camRotationSpeed * Time.deltaTime);
+            side1.roomAudio.volume += Time.deltaTime / timer;
 
             yield return 0;
         }
@@ -358,12 +362,16 @@ public class NewDoorMechanics : MonoBehaviour
         player.GetComponent<LookAtInteractable>().enabled = false;
         cam.GetComponent<DimensionCamera>().enabled = false;
 
+        //PLAY AUDIO
+        side2.roomAudio.Play();
+
         //MOVE PLAYER AND CAMERA
         for (float i = 0; i < timer; i += Time.deltaTime)
         {
             player.transform.position = Vector3.MoveTowards(player.transform.position, playerInteractionPosition, playerPositionSpeed * Time.deltaTime);
             player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, playerInteractionRotationListening, playerRotationSpeedListening * Time.deltaTime);
             cam.transform.localRotation = Quaternion.RotateTowards(cam.transform.localRotation, camInteractionRotation, camRotationSpeed * Time.deltaTime);
+            side2.roomAudio.volume += Time.deltaTime / timer;
 
             yield return 0;
         }
@@ -380,6 +388,8 @@ public class NewDoorMechanics : MonoBehaviour
             player.transform.position = Vector3.MoveTowards(player.transform.position, playerPosition, playerPositionSpeed * Time.deltaTime);
             player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, playerRotation, playerRotationSpeedListening * Time.deltaTime);
             cam.transform.localRotation = Quaternion.RotateTowards(cam.transform.localRotation, cameraRotation, camRotationSpeed * Time.deltaTime);
+            side1.roomAudio.volume -= Time.deltaTime / timer;
+            side2.roomAudio.volume -= Time.deltaTime / timer;
 
             yield return 0;
         }
@@ -388,6 +398,8 @@ public class NewDoorMechanics : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = true;
         player.GetComponent<LookAtInteractable>().enabled = true;
         cam.GetComponent<DimensionCamera>().enabled = true;
+        side1.roomAudio.Stop();
+        side2.roomAudio.Stop();
 
         isInteracting = false;
     }
