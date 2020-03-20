@@ -902,7 +902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55619662}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.2, z: 0}
+  m_LocalPosition: {x: -2.63, y: 4.2, z: 2.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835481095}
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b91bfd643eb4864aa2c492e5c3e4f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 273863493}
+  room: {fileID: 273863494}
   audioS: {fileID: 124765726}
   goodSounds: []
   badSounds: []
@@ -2571,8 +2571,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136561381}
-  - component: {fileID: 136561383}
   - component: {fileID: 136561382}
+  - component: {fileID: 136561383}
   m_Layer: 0
   m_Name: Room 5
   m_TagString: Untagged
@@ -2588,7 +2588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136561380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.1, y: 1.5, z: 23.7}
+  m_LocalPosition: {x: 23.25, y: 1.5, z: 19.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1524734703}
@@ -2613,8 +2613,8 @@ MonoBehaviour:
   roomCondition: 1
   ai: {fileID: 348466542}
   nav: {fileID: 348466543}
---- !u!65 &136561383
-BoxCollider:
+--- !u!64 &136561383
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2623,9 +2623,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 12.78, y: 1, z: 13.78}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2534964839176971238, guid: cb2ea939370962f489fa433aadc95a41, type: 3}
 --- !u!1 &136912297
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,8 +4320,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 233089692}
-  - component: {fileID: 233089694}
   - component: {fileID: 233089693}
+  - component: {fileID: 233089694}
   m_Layer: 0
   m_Name: Room 9
   m_TagString: Untagged
@@ -4336,7 +4337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233089691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.1, y: 1.5, z: -9.5}
+  m_LocalPosition: {x: -9.01, y: 1.5, z: -9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 911879454}
@@ -4361,8 +4362,8 @@ MonoBehaviour:
   roomCondition: 1
   ai: {fileID: 348466542}
   nav: {fileID: 348466543}
---- !u!65 &233089694
-BoxCollider:
+--- !u!64 &233089694
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4371,9 +4372,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 14.06, y: 1, z: 7.18}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5495902117074765545, guid: d3799a856d55fcf469f81b7fb7dbd9f0, type: 3}
 --- !u!1 &233912189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5105,7 +5107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273863491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.92, y: 1.5, z: 2.54}
+  m_LocalPosition: {x: 20.15, y: 1.5, z: 3.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1768625056}
@@ -5113,7 +5115,21 @@ Transform:
   m_Father: {fileID: 2080843266}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &273863493
+--- !u!64 &273863493
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273863491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5495902117074765545, guid: 99349a965ba7fd346bb8d48529b3fcfe, type: 3}
+--- !u!114 &273863494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5127,22 +5143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 124765726}
   ceilingLight: {fileID: 1768625055}
-  roomCondition: 1
+  roomCondition: 2
   ai: {fileID: 348466542}
   nav: {fileID: 348466543}
---- !u!65 &273863494
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273863491}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.4, y: 1, z: 14.19}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &277491594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5699,8 +5702,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 289272625}
-  - component: {fileID: 289272627}
   - component: {fileID: 289272626}
+  - component: {fileID: 289272627}
   m_Layer: 0
   m_Name: Room 15
   m_TagString: Untagged
@@ -5716,7 +5719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289272624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.7, y: 1.5, z: -13.1}
+  m_LocalPosition: {x: 22.5, y: 1.5, z: -12.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 308848643}
@@ -5741,8 +5744,8 @@ MonoBehaviour:
   roomCondition: 1
   ai: {fileID: 348466542}
   nav: {fileID: 348466543}
---- !u!65 &289272627
-BoxCollider:
+--- !u!64 &289272627
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5751,9 +5754,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8.68, y: 1, z: 8.67}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5495902117074765545, guid: 550b177e97e787b49a79ea682ebe52ae, type: 3}
 --- !u!1 &295946888
 GameObject:
   m_ObjectHideFlags: 0
@@ -6111,7 +6115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299655567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.3, y: 1.5, z: 30.8}
+  m_LocalPosition: {x: -7.93, y: 1.5, z: 28.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407081766}
@@ -6144,10 +6148,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299655567}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.72, y: 1, z: 9.79}
+  m_Size: {x: 12.5, y: 1, z: 12.4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &302826510
 GameObject:
@@ -6414,7 +6418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308848641}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.2, z: 0}
+  m_LocalPosition: {x: -2.63, y: 4.2, z: 1.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 289272625}
@@ -10780,7 +10784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469486387}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.2, z: 0}
+  m_LocalPosition: {x: -2.72, y: 4.2, z: 1.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 548293494}
@@ -11913,8 +11917,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548293494}
-  - component: {fileID: 548293496}
   - component: {fileID: 548293495}
+  - component: {fileID: 548293496}
   m_Layer: 0
   m_Name: Room 13
   m_TagString: Untagged
@@ -11929,15 +11933,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548293493}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.3, y: 1.5, z: -23.3}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -12.51, y: 1.5, z: -21.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469486389}
   - {fileID: 1678077889}
   m_Father: {fileID: 2080843266}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &548293495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11955,8 +11959,8 @@ MonoBehaviour:
   roomCondition: 1
   ai: {fileID: 348466542}
   nav: {fileID: 348466543}
---- !u!65 &548293496
-BoxCollider:
+--- !u!64 &548293496
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11965,9 +11969,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.77, y: 1, z: 7.27}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5495902117074765545, guid: b623aa69577f10c4ea6126127f829065, type: 3}
 --- !u!1 &562066666
 GameObject:
   m_ObjectHideFlags: 0
@@ -18786,7 +18791,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927832319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.630001, y: 0, z: 2.3600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1835481095}
@@ -20321,7 +20326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992303792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.3, y: 1.5, z: 24.7}
+  m_LocalPosition: {x: -24.3, y: 1.5, z: 23.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 83833651}
@@ -20357,7 +20362,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 17.36, y: 1, z: 18.02}
+  m_Size: {x: 17.82, y: 1, z: 19.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1000309976
 GameObject:
@@ -22991,8 +22996,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145518124}
-  - component: {fileID: 1145518126}
   - component: {fileID: 1145518125}
+  - component: {fileID: 1145518126}
   m_Layer: 0
   m_Name: Room 14
   m_TagString: Untagged
@@ -23008,7 +23013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145518123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2999997, y: 1.5, z: -14.9}
+  m_LocalPosition: {x: 4.6, y: 1.5, z: -13.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 136912299}
@@ -23033,8 +23038,8 @@ MonoBehaviour:
   roomCondition: 1
   ai: {fileID: 348466542}
   nav: {fileID: 348466543}
---- !u!65 &1145518126
-BoxCollider:
+--- !u!64 &1145518126
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -23043,9 +23048,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 12.97, y: 1, z: 13.88}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2534964839176971238, guid: b4503202c32e03147910f472bbbb672f, type: 3}
 --- !u!1 &1150627020
 GameObject:
   m_ObjectHideFlags: 0
@@ -23072,7 +23078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150627020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.1, y: 1.5, z: 5.5}
+  m_LocalPosition: {x: -20.99, y: 1.5, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 284565683}
@@ -26791,6 +26797,7 @@ GameObject:
   - component: {fileID: 1367296791}
   - component: {fileID: 1367296793}
   - component: {fileID: 1367296792}
+  - component: {fileID: 1367296794}
   m_Layer: 0
   m_Name: Room 16
   m_TagString: Untagged
@@ -26806,7 +26813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367296790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.5, y: 1.5, z: 38.6}
+  m_LocalPosition: {x: -38.25, y: 1.5, z: 37.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 277807412}
@@ -26842,8 +26849,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.89, y: 1, z: 12.87}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.76, y: 1, z: 22.57}
+  m_Center: {x: -1.67, y: 0, z: -3.6}
+--- !u!65 &1367296794
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367296790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.08, y: 1, z: 11.69}
+  m_Center: {x: 9.8, y: 0, z: 1.89}
 --- !u!1 &1391457220
 GameObject:
   m_ObjectHideFlags: 0
@@ -31602,7 +31622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636745267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.630001, y: 0, z: 1.4700003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 289272625}
@@ -31857,7 +31877,7 @@ MonoBehaviour:
   - {fileID: 1846521652}
   - {fileID: 1854080518}
   - {fileID: 149012604}
-  - {fileID: 273863493}
+  - {fileID: 0}
   - {fileID: 136561382}
   - {fileID: 1725034794}
   - {fileID: 992303794}
@@ -32637,7 +32657,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678077888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.72, y: 0, z: 1.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 548293494}
@@ -33336,6 +33356,7 @@ GameObject:
   - component: {fileID: 1725034793}
   - component: {fileID: 1725034795}
   - component: {fileID: 1725034794}
+  - component: {fileID: 1725034796}
   m_Layer: 0
   m_Name: Room 6
   m_TagString: Untagged
@@ -33351,7 +33372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725034792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.299999, y: 1.5, z: 30.3}
+  m_LocalPosition: {x: 10.76, y: 1.5, z: 25.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 316770219}
@@ -33387,8 +33408,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.46, y: 1, z: 9.9}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7.12, y: 1, z: 8.33}
+  m_Center: {x: 0, y: 0, z: 7.65}
+--- !u!65 &1725034796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725034792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.96, y: 1, z: 6.6}
+  m_Center: {x: -3.91, y: 0, z: 0.09}
 --- !u!1 &1727962049
 GameObject:
   m_ObjectHideFlags: 0
@@ -33614,8 +33648,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.35, y: 1, z: 23}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7.35, y: 1, z: 21.75}
+  m_Center: {x: 0.6, y: 0, z: 0.2}
 --- !u!1 &1729222379
 GameObject:
   m_ObjectHideFlags: 0
@@ -35434,8 +35468,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1835481095}
-  - component: {fileID: 1835481097}
   - component: {fileID: 1835481096}
+  - component: {fileID: 1835481097}
   m_Layer: 0
   m_Name: Room 12
   m_TagString: Untagged
@@ -35451,7 +35485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835481094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.5, y: 1.5, z: -18.3}
+  m_LocalPosition: {x: -13.41, y: 1.5, z: -20.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 55619664}
@@ -35476,8 +35510,8 @@ MonoBehaviour:
   roomCondition: 1
   ai: {fileID: 348466542}
   nav: {fileID: 348466543}
---- !u!65 &1835481097
-BoxCollider:
+--- !u!64 &1835481097
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35486,9 +35520,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.83, y: 1, z: 7.13}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5495902117074765545, guid: b623aa69577f10c4ea6126127f829065, type: 3}
 --- !u!1 &1846521650
 GameObject:
   m_ObjectHideFlags: 0
