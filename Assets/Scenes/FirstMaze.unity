@@ -1985,8 +1985,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 273863493}
   audioS: {fileID: 124765726}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &125495088
 GameObject:
   m_ObjectHideFlags: 0
@@ -4129,8 +4129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 992303794}
   audioS: {fileID: 209948648}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &214049209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4600,8 +4600,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 299655569}
   audioS: {fileID: 255488479}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &273863491
 GameObject:
   m_ObjectHideFlags: 0
@@ -5927,8 +5927,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 233089693}
   audioS: {fileID: 302826512}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &306921132
 GameObject:
   m_ObjectHideFlags: 0
@@ -8396,8 +8396,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1854080518}
   audioS: {fileID: 382446674}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &383253527
 GameObject:
   m_ObjectHideFlags: 0
@@ -17544,8 +17544,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1846521652}
   audioS: {fileID: 915840961}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &919261756
 GameObject:
   m_ObjectHideFlags: 0
@@ -17945,8 +17945,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1835481096}
   audioS: {fileID: 927832321}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &933467612
 GameObject:
   m_ObjectHideFlags: 0
@@ -22381,8 +22381,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1150627022}
   audioS: {fileID: 1182529441}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &1192667542
 GameObject:
   m_ObjectHideFlags: 0
@@ -25946,8 +25946,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1725034794}
   audioS: {fileID: 1477376792}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &1480162781
 GameObject:
   m_ObjectHideFlags: 0
@@ -29026,8 +29026,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 289272626}
   audioS: {fileID: 1636745269}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &1639999632
 GameObject:
   m_ObjectHideFlags: 0
@@ -30058,8 +30058,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 548293495}
   audioS: {fileID: 1678077890}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &1697851687
 GameObject:
   m_ObjectHideFlags: 0
@@ -30771,8 +30771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1173466619}
   audioS: {fileID: 1716273722}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &1724265484
 GameObject:
   m_ObjectHideFlags: 0
@@ -31735,8 +31735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 136561382}
   audioS: {fileID: 1759188273}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &1759258053
 GameObject:
   m_ObjectHideFlags: 0
@@ -35046,8 +35046,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 149012604}
   audioS: {fileID: 1964205090}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 8300000, guid: 0bea3faa4890d194e8bbf628c16cfeca, type: 3}
+  goodSounds: []
+  badSounds:
+  - {fileID: 8300000, guid: 0bea3faa4890d194e8bbf628c16cfeca, type: 3}
 --- !u!1 &1966142346
 GameObject:
   m_ObjectHideFlags: 0
@@ -35883,8 +35884,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1145518125}
   audioS: {fileID: 2032614295}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &2039436494
 GameObject:
   m_ObjectHideFlags: 0
@@ -36498,8 +36499,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1367296792}
   audioS: {fileID: 2081383516}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &2081854055
 GameObject:
   m_ObjectHideFlags: 0
@@ -37045,8 +37046,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room: {fileID: 1728761542}
   audioS: {fileID: 2103144576}
-  goodSound: {fileID: 0}
-  badSound: {fileID: 0}
+  goodSounds: []
+  badSounds: []
 --- !u!1 &2103632350
 GameObject:
   m_ObjectHideFlags: 0
