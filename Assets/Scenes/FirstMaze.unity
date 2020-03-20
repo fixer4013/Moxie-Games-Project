@@ -31183,8 +31183,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1612533443}
-  - component: {fileID: 1612533444}
   - component: {fileID: 1612533445}
+  - component: {fileID: 1612533444}
   m_Layer: 11
   m_Name: FootSteps
   m_TagString: Untagged
