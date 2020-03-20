@@ -4299,7 +4299,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 917329169}
   enemyIsNear: 0
   knockingAudio: {fileID: 1862300663}
   side1: {fileID: 1933697897}
@@ -4365,7 +4365,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 1563971306}
   enemyIsNear: 0
   knockingAudio: {fileID: 724030663}
   side1: {fileID: 1465597400}
@@ -7305,7 +7305,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 57396945}
   enemyIsNear: 0
   knockingAudio: {fileID: 1894175029}
   side1: {fileID: 1494136420}
@@ -18539,7 +18539,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 1886972676}
   enemyIsNear: 0
   knockingAudio: {fileID: 1659567565}
   side1: {fileID: 1639999633}
@@ -19158,7 +19158,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 382478368}
   enemyIsNear: 0
   knockingAudio: {fileID: 793209950}
   side1: {fileID: 325131339}
@@ -24979,7 +24979,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 1789377043}
   enemyIsNear: 0
   knockingAudio: {fileID: 616411102}
   side1: {fileID: 984683793}
@@ -25105,7 +25105,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 1221667030}
   enemyIsNear: 0
   knockingAudio: {fileID: 1564175145}
   side1: {fileID: 944724962}
@@ -26154,7 +26154,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 438192542}
   enemyIsNear: 0
   knockingAudio: {fileID: 665857746}
   side1: {fileID: 1885474842}
@@ -27733,7 +27733,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 1727962051}
   enemyIsNear: 0
   knockingAudio: {fileID: 125495090}
   side1: {fileID: 28593403}
@@ -29935,7 +29935,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 845300384}
   enemyIsNear: 0
   knockingAudio: {fileID: 730538347}
   side1: {fileID: 1205938439}
@@ -33937,7 +33937,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 1200801598}
   enemyIsNear: 0
   knockingAudio: {fileID: 1029989386}
   side1: {fileID: 254359650}
@@ -34300,7 +34300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 715695086}
   audioS: {fileID: 1612533444}
-  walking: {fileID: 8300000, guid: 65a4b68f3e38a924ea5dc7663e8e8f33, type: 3}
+  walking: {fileID: 8300000, guid: 0e0ce700240122b44873a943b2af579e, type: 3}
   running: {fileID: 8300000, guid: cdb738ca570424f44938b1e02d450d13, type: 3}
 --- !u!1 &1628099803
 GameObject:
@@ -35433,7 +35433,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 1532930162}
   enemyIsNear: 0
   knockingAudio: {fileID: 1701861918}
   side1: {fileID: 2131914223}
@@ -37336,7 +37336,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 855976007}
   enemyIsNear: 0
   knockingAudio: {fileID: 438490677}
   side1: {fileID: 1729222380}
@@ -39212,7 +39212,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 1063782406}
   enemyIsNear: 0
   knockingAudio: {fileID: 654278410}
   side1: {fileID: 203460169}
@@ -39370,7 +39370,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 946020370}
   enemyIsNear: 0
   knockingAudio: {fileID: 1419401847}
   side1: {fileID: 1794923740}
@@ -42286,7 +42286,7 @@ MonoBehaviour:
   closingDistance: 4
   doorAnimating: 0
   open: 0
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 979338626}
   enemyIsNear: 0
   knockingAudio: {fileID: 2094846851}
   side1: {fileID: 647089440}
