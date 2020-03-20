@@ -15,6 +15,8 @@ public class NewDoorMechanics : MonoBehaviour
     public bool doorAnimating;
     public bool open;
     public AudioSource openDoorSound;
+    public AudioSource slamDoorSound;
+    public float slamChance;
 
     //DOOR OPENING MECHANICS ENEMY
     public bool enemyIsNear;
@@ -114,7 +116,18 @@ public class NewDoorMechanics : MonoBehaviour
         anim.Play("CloseDoor");
         doorAnimating = true;
         open = false;
-        yield return new WaitForSeconds(2f);
+        float slamRandomNumber = Random.Range(0, 100f);
+        if (slamRandomNumber <= slamChance)
+        {
+            anim.speed = 4;
+            yield return new WaitForSeconds(2f / 4);
+            slamDoorSound.Play();
+        }
+        else
+        {
+            anim.speed = 1;
+            yield return new WaitForSeconds(2f);
+        }
         doorAnimating = false;
     }  
     
