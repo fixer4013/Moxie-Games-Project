@@ -18,7 +18,7 @@ public class Rooms : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                ai.maxSpeed += 1;
+                ai.maxSpeed += .5f;
                 if (nav.speed != 0)
                 {
                     nav.speed = ai.maxSpeed;
