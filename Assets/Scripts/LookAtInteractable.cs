@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LookAtInteractable : MonoBehaviour
 {
@@ -12,12 +13,19 @@ public class LookAtInteractable : MonoBehaviour
 
     public LayerMask layerInteractables;
 
+    public Text txt;
+
     void Update()
     {
         LookAt();
         if (currentObject != null)
         {
             Interact();
+            txt.enabled = true;
+        }
+        else
+        {
+            txt.enabled = false;
         }
     }
 

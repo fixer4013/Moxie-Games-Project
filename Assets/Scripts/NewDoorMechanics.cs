@@ -14,6 +14,7 @@ public class NewDoorMechanics : MonoBehaviour
     public float closingDistance;
     public bool doorAnimating;
     public bool open;
+    public AudioSource openDoorSound;
 
     //DOOR OPENING MECHANICS ENEMY
     public bool enemyIsNear;
@@ -87,6 +88,7 @@ public class NewDoorMechanics : MonoBehaviour
     public IEnumerator DoorOpenAnimation(float animSpeed, bool isEnemy)
     {
         anim.Play("OpenDoor");
+        openDoorSound.Play();
         var currentAnimSpeed = anim.speed;
         anim.speed = animSpeed;
         doorAnimating = true;

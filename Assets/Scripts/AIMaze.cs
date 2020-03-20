@@ -30,7 +30,8 @@ public class AIMaze : MonoBehaviour
     void ChooseTarget()
     {
         choosePath = false;
-        currentTarget = targets[Random.Range(0, targets.Length - 1)];
+        int rand = Random.Range(0, targets.Length);
+        currentTarget = targets[rand];
         agent.SetDestination(currentTarget.transform.position);
 
     }
