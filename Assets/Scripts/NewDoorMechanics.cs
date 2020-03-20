@@ -86,7 +86,7 @@ public class NewDoorMechanics : MonoBehaviour
     //DOOR OPENING AND CLOSING MECHANICS
     public IEnumerator DoorOpenAnimation(float animSpeed, bool isEnemy)
     {
-        anim.Play("DoorOpenNew1");
+        anim.Play("OpenDoor");
         var currentAnimSpeed = anim.speed;
         anim.speed = animSpeed;
         doorAnimating = true;
@@ -109,7 +109,7 @@ public class NewDoorMechanics : MonoBehaviour
     //DOOR OPENING AND CLOSING MECHANICS
     IEnumerator DoorCloseAnimation()
     {
-        anim.Play("DoorCloseNew1");
+        anim.Play("CloseDoor");
         doorAnimating = true;
         open = false;
         yield return new WaitForSeconds(2f);
