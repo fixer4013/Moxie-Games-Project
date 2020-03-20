@@ -22,8 +22,9 @@ public class LookAtInteractable : MonoBehaviour
         {
             Interact();
             txt.enabled = true;
+            Debug.Log("test");
         }
-        else
+        if (currentObject == null || currentObject.GetComponent<PhysicalDoor>().ndm.isInteracting)
         {
             txt.enabled = false;
         }
