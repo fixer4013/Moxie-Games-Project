@@ -15,6 +15,8 @@ public class KillPlayer : MonoBehaviour
     public Text text;
     public Image image;
 
+    public AudioSource deathSound;
+
     // Update is called once per frame
     void Update()
     {
@@ -30,7 +32,7 @@ public class KillPlayer : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = false;
         cam.enabled = false;
         nav.speed = 0;
-
+        deathSound.Play();
 
         text.enabled = true;
         image.enabled = true;
