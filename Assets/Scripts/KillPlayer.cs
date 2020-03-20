@@ -39,6 +39,6 @@ public class KillPlayer : MonoBehaviour
 
     void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
