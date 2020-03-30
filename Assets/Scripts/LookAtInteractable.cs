@@ -59,7 +59,7 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.GetComponent<PhysicalDoor>())
             {
-                StartCoroutine(currentObject.GetComponent<PhysicalDoor>().ndm.DoorOpenAnimation(1f, false));
+                StartCoroutine(currentObject.GetComponent<PhysicalDoor>().ndm.DoorOpenAnimation(1f, false, true));
             }
         }
 

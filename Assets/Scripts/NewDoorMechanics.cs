@@ -17,6 +17,7 @@ public class NewDoorMechanics : MonoBehaviour
     public AudioSource openDoorSound;
     public AudioSource slamDoorSound;
     public float slamChance;
+    public bool playerOpenedDoor;
 
     //DOOR OPENING MECHANICS ENEMY
     public bool enemyIsNear;
@@ -56,12 +57,15 @@ public class NewDoorMechanics : MonoBehaviour
         //DOOR OPENING AND CLOSING MECHANICS
         if (open && !side1.isPlayerNear && !side2.isPlayerNear && !enemyIsNear)
         {
-            StartCoroutine(DoorCloseAnimation());
+            StartCoroutine(DoorCloseAnimation(playerOpenedDoor));
         }
 
         if (!open && !doorAnimating && enemyIsNear)
         {
-            StartCoroutine(DoorOpenAnimation(0.33f, true));
+            if (RoomNumber.roomNumberEnemy != RoomNumber.roomnumberPlayer)
+            {
+                StartCoroutine(DoorOpenAnimation(0.33f, true, false));
+            }
         }
         enemyIsNear = false;
 
@@ -87,13 +91,15 @@ public class NewDoorMechanics : MonoBehaviour
 
 
     //DOOR OPENING AND CLOSING MECHANICS
-    public IEnumerator DoorOpenAnimation(float animSpeed, bool isEnemy)
+    public IEnumerator DoorOpenAnimation(float animSpeed, bool isEnemy, bool didPlayerOpenDoor)
     {
         anim.Play("OpenDoor");
         openDoorSound.Play();
         var currentAnimSpeed = anim.speed;
         anim.speed = animSpeed;
         doorAnimating = true;
+
+        playerOpenedDoor = didPlayerOpenDoor;
 
         if (isEnemy)
         {
@@ -111,13 +117,13 @@ public class NewDoorMechanics : MonoBehaviour
     }
 
     //DOOR OPENING AND CLOSING MECHANICS
-    IEnumerator DoorCloseAnimation()
+    IEnumerator DoorCloseAnimation(bool doesPlayerCloseDoor)
     {
         anim.Play("CloseDoor");
         doorAnimating = true;
         open = false;
         float slamRandomNumber = Random.Range(0, 100f);
-        if (slamRandomNumber <= slamChance)
+        if (slamRandomNumber <= slamChance && doesPlayerCloseDoor)
         {
             anim.speed = 4;
             yield return new WaitForSeconds(2f / 4);
