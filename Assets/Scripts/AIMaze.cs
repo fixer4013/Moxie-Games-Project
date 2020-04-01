@@ -12,6 +12,8 @@ public class AIMaze : MonoBehaviour
     bool choosePath;
     public float maxSpeed;
 
+    public PlayerMovement player;
+
     private void Start()
     {
         maxSpeed = agent.speed;
@@ -24,6 +26,15 @@ public class AIMaze : MonoBehaviour
         {
             choosePath = true;
             Invoke("ChooseTarget", 2f);
+        }
+
+        if (RoomNumber.roomNumberEnemy == RoomNumber.roomnumberPlayer)
+        {
+            if (player.x != 0 || player.z != 0)
+            {
+                agent.SetDestination(player.transform.position);
+                agent.speed = maxSpeed * 2;
+            }
         }
     }
 

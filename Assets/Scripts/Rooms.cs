@@ -18,6 +18,8 @@ public class Rooms : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
+                nav.SetDestination(transform.position);
+
                 ai.maxSpeed += .5f;
                 if (nav.speed != 0)
                 {
@@ -28,14 +30,14 @@ public class Rooms : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (roomCondition == 2)
-        {
-            if (other.gameObject.tag == "Player")
-            {
-                nav.SetDestination(other.transform.position);
-            }
-        }
-    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (roomCondition == 2)
+    //    {
+    //        if (other.gameObject.tag == "Player")
+    //        {
+    //            nav.SetDestination(other.transform.position);
+    //        }
+    //    }
+    //}
 }
