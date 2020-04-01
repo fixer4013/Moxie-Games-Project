@@ -3885,7 +3885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 1994654501}
   closingDistance: 4
   doorAnimating: 0
@@ -3955,7 +3956,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 1999575600}
   closingDistance: 4
   doorAnimating: 0
@@ -6779,7 +6781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 1114144414}
   closingDistance: 4
   doorAnimating: 0
@@ -7589,6 +7592,8 @@ MonoBehaviour:
   - {fileID: 299655568}
   maxSpeed: 0
   player: {fileID: 715695086}
+  inSameRoomAsPlayer: 0
+  isChasingPlayer: 0
 --- !u!195 &348466543
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9594,7 +9599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 581567700}
   closingDistance: 4
   doorAnimating: 0
@@ -17354,7 +17360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 1950126902}
   closingDistance: 4
   doorAnimating: 0
@@ -17793,7 +17800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 271506684}
   closingDistance: 4
   doorAnimating: 0
@@ -22952,7 +22960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 2105445395}
   closingDistance: 4
   doorAnimating: 0
@@ -23082,7 +23091,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 279521864}
   closingDistance: 4
   doorAnimating: 0
@@ -24072,7 +24082,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 788507323}
   closingDistance: 4
   doorAnimating: 0
@@ -25727,7 +25738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 1534724892}
   closingDistance: 4
   doorAnimating: 0
@@ -28337,7 +28349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 252397867}
   closingDistance: 4
   doorAnimating: 0
@@ -31629,7 +31642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 1350151358}
   closingDistance: 4
   doorAnimating: 0
@@ -33294,7 +33308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 50615541}
   closingDistance: 4
   doorAnimating: 0
@@ -35209,7 +35224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 1459992196}
   closingDistance: 4
   doorAnimating: 0
@@ -36766,7 +36782,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 395118476}
   closingDistance: 4
   doorAnimating: 0
@@ -36836,7 +36853,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 1544283300}
   closingDistance: 4
   doorAnimating: 0
@@ -39389,7 +39407,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 715695082}
-  enemy: {fileID: 348466543}
+  enemyAI: {fileID: 348466542}
+  enemyNav: {fileID: 348466543}
   anim: {fileID: 453849212}
   closingDistance: 4
   doorAnimating: 0

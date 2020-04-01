@@ -7,7 +7,8 @@ public class NewDoorMechanics : MonoBehaviour
 {
 
     public GameObject player;
-    public NavMeshAgent enemy;
+    public AIMaze enemyAI;
+    public NavMeshAgent enemyNav;
 
     //DOOR OPENING AND CLOSING MECHANICS
     public Animator anim;
@@ -62,7 +63,7 @@ public class NewDoorMechanics : MonoBehaviour
 
         if (!open && !doorAnimating && enemyIsNear)
         {
-            if (RoomNumber.roomNumberEnemy != RoomNumber.roomnumberPlayer)
+            if (!enemyAI.inSameRoomAsPlayer || !enemyAI.isChasingPlayer)
             {
                 StartCoroutine(DoorOpenAnimation(0.33f, true, false));
             }
@@ -103,7 +104,7 @@ public class NewDoorMechanics : MonoBehaviour
 
         if (isEnemy)
         {
-            enemy.speed = 0;
+            enemyNav.speed = 0;
         }
 
         yield return new WaitForSeconds(2f / animSpeed);
@@ -112,7 +113,7 @@ public class NewDoorMechanics : MonoBehaviour
         anim.speed = currentAnimSpeed;
         if (isEnemy)
         {
-            enemy.speed = enemy.GetComponent<AIMaze>().maxSpeed;
+            enemyNav.speed = enemyNav.GetComponent<AIMaze>().maxSpeed;
         }
     }
 
