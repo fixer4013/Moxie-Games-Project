@@ -7588,6 +7588,7 @@ MonoBehaviour:
   - {fileID: 1367296791}
   - {fileID: 299655568}
   maxSpeed: 0
+  player: {fileID: 715695086}
 --- !u!195 &348466543
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15388,6 +15389,8 @@ MonoBehaviour:
   sprintSpeed: 6
   speed: 4
   sprinting: 0
+  x: 0
+  z: 0
   rechargeStaminaSpeed: 10
 --- !u!4 &715695087
 Transform:
