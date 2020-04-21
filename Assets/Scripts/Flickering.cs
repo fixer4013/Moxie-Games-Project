@@ -6,12 +6,17 @@ public class Flickering : MonoBehaviour
 {
     public float lightStrength;
     Light lampLight;
+    bool flickeringOn = true;
+
     void Start()
     {
         lampLight = GetComponent<Light>();
         lightStrength = lampLight.intensity;
 
-        StartCoroutine(FlickeringLight());
+        if (flickeringOn == true)
+        {
+            StartCoroutine(FlickeringLight());
+        }
     }
 
     IEnumerator FlickeringLight()
