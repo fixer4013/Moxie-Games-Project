@@ -23,7 +23,7 @@ public class LookAtInteractable : MonoBehaviour
             Interact();
             txt.enabled = true;
         }
-        if (currentObject == null || currentObject.GetComponent<PhysicalDoor>().ndm.isInteracting)
+        if (currentObject == null || currentObject.GetComponent<ActualDoor>().doorMechanics.isInteracting)
         {
             txt.enabled = false;
         }
@@ -40,7 +40,7 @@ public class LookAtInteractable : MonoBehaviour
 
         {
             currentObject = hit.transform.gameObject;
-            if (currentObject.GetComponent<PhysicalDoor>().ndm.open || currentObject.GetComponent<PhysicalDoor>().ndm.doorAnimating)
+            if (currentObject.GetComponent<ActualDoor>().doorMechanics.open || currentObject.GetComponent<ActualDoor>().doorMechanics.doorAnimating)
             {
                 currentObject = null;
             }
@@ -57,46 +57,46 @@ public class LookAtInteractable : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (currentObject.GetComponent<PhysicalDoor>())
+            if (currentObject.GetComponent<ActualDoor>())
             {
-                StartCoroutine(currentObject.GetComponent<PhysicalDoor>().ndm.DoorOpenAnimation(1f, false, true));
+                StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.DoorOpenAnimation());
             }
         }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (currentObject.GetComponent<PhysicalDoor>())
+            if (currentObject.GetComponent<ActualDoor>())
             {
-                currentObject.GetComponent<PhysicalDoor>().ndm.Knocking();
+                currentObject.GetComponent<ActualDoor>().doorMechanics.Knocking();
             }
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (currentObject.GetComponent<PhysicalDoor>())
+            if (currentObject.GetComponent<ActualDoor>())
             {
-                if (currentObject.GetComponent<PhysicalDoor>().ndm.side1.isPlayerNear)
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.side1.isPlayerNear)
                 {
-                    StartCoroutine(currentObject.GetComponent<PhysicalDoor>().ndm.PeekingSide1());
+                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.PeekingSide1());
                 }
-                if (currentObject.GetComponent<PhysicalDoor>().ndm.side2.isPlayerNear)
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.side2.isPlayerNear)
                 {
-                    StartCoroutine(currentObject.GetComponent<PhysicalDoor>().ndm.PeekingSide2());
+                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.PeekingSide2());
                 }
             }
         }
 
         if (Input.GetMouseButtonDown(1))
         {
-            if (currentObject.GetComponent<PhysicalDoor>())
+            if (currentObject.GetComponent<ActualDoor>())
             {
-                if (currentObject.GetComponent<PhysicalDoor>().ndm.side1.isPlayerNear)
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.side1.isPlayerNear)
                 {
-                    StartCoroutine(currentObject.GetComponent<PhysicalDoor>().ndm.ListeningSide1());
+                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.ListeningSide1());
                 }
-                if (currentObject.GetComponent<PhysicalDoor>().ndm.side2.isPlayerNear)
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.side2.isPlayerNear)
                 {
-                    StartCoroutine(currentObject.GetComponent<PhysicalDoor>().ndm.ListeningSide2());
+                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.ListeningSide2());
                 }
             }
         }
