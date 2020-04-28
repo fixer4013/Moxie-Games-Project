@@ -18538,6 +18538,10 @@ PrefabInstance:
       propertyPath: ShapeModule.radius.value
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
 --- !u!1 &870554715
@@ -41266,16 +41270,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: lift_V1.01
       objectReference: {fileID: 0}
-    - target: {fileID: -5785490568503328351, guid: 7e194a8d5c0d3364eb9a9386689bd655,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 20b7564b649df8a4ca06e0bea25676ee, type: 2}
-    - target: {fileID: -4541749283979534507, guid: 7e194a8d5c0d3364eb9a9386689bd655,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 20b7564b649df8a4ca06e0bea25676ee, type: 2}
     - target: {fileID: -4216859302048453862, guid: 7e194a8d5c0d3364eb9a9386689bd655,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41331,6 +41325,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5785490568503328351, guid: 7e194a8d5c0d3364eb9a9386689bd655,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 20b7564b649df8a4ca06e0bea25676ee, type: 2}
+    - target: {fileID: -4541749283979534507, guid: 7e194a8d5c0d3364eb9a9386689bd655,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 20b7564b649df8a4ca06e0bea25676ee, type: 2}
     - target: {fileID: -3250834574032358881, guid: 7e194a8d5c0d3364eb9a9386689bd655,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -42904,7 +42908,6 @@ GameObject:
   - component: {fileID: 6666619775144362857}
   - component: {fileID: 1185774659103391963}
   - component: {fileID: 315813505080552532}
-  - component: {fileID: 315813505080552533}
   m_Layer: 0
   m_Name: floor_17
   m_TagString: Untagged
@@ -42926,20 +42929,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -4731922761816973508, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &315813505080552533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315813505080552531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!23 &357721330838842103
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43100,7 +43089,6 @@ GameObject:
   - component: {fileID: 7794351395578934133}
   - component: {fileID: 8905107318414140413}
   - component: {fileID: 865775492527962250}
-  - component: {fileID: 865775492527962251}
   m_Layer: 0
   m_Name: floor_14
   m_TagString: Untagged
@@ -43122,20 +43110,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 5279056762889118939, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &865775492527962251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865775492527962249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!23 &1009125138701203141
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43270,7 +43244,6 @@ GameObject:
   - component: {fileID: 9121586712034688775}
   - component: {fileID: 8270837458516949401}
   - component: {fileID: 1855870605575739648}
-  - component: {fileID: 1855870605575739649}
   m_Layer: 0
   m_Name: floor_13
   m_TagString: Untagged
@@ -43292,20 +43265,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 3579270850196791329, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &1855870605575739649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855870605575739647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!1 &1868234188922969680
 GameObject:
   m_ObjectHideFlags: 0
@@ -43318,7 +43277,6 @@ GameObject:
   - component: {fileID: 3744055781933331227}
   - component: {fileID: 8699105310828606346}
   - component: {fileID: 1868234188922969681}
-  - component: {fileID: 1868234188922969682}
   m_Layer: 0
   m_Name: floor_7
   m_TagString: Untagged
@@ -43340,20 +43298,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 1243792084919094608, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &1868234188922969682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868234188922969680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!4 &1937648945264345781
 Transform:
   m_ObjectHideFlags: 0
@@ -43637,7 +43581,6 @@ GameObject:
   - component: {fileID: 5758037298220997368}
   - component: {fileID: 2312704517067092335}
   - component: {fileID: 3125589364114972015}
-  - component: {fileID: 3125589364114972016}
   m_Layer: 0
   m_Name: floor_4
   m_TagString: Untagged
@@ -43659,20 +43602,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -7172463518141196987, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &3125589364114972016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3125589364114972014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!33 &3545678516048197536
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43743,7 +43672,6 @@ GameObject:
   - component: {fileID: 5999369666550139663}
   - component: {fileID: 7635929697396921679}
   - component: {fileID: 3762843921680462642}
-  - component: {fileID: 3762843921680462643}
   m_Layer: 0
   m_Name: floor_1
   m_TagString: Untagged
@@ -43765,20 +43693,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -2774623519504801112, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &3762843921680462643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3762843921680462641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!33 &3872034213100806711
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43807,7 +43721,6 @@ GameObject:
   - component: {fileID: 2560476240343129175}
   - component: {fileID: 5129217559880690530}
   - component: {fileID: 4004015689022857583}
-  - component: {fileID: 4004015689022857584}
   m_Layer: 0
   m_Name: floor_16
   m_TagString: Untagged
@@ -43829,20 +43742,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -63132865933879449, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &4004015689022857584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4004015689022857582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!4 &4577990448822539130
 Transform:
   m_ObjectHideFlags: 0
@@ -44014,7 +43913,6 @@ GameObject:
   - component: {fileID: 6270789349893243211}
   - component: {fileID: 6554005978629487634}
   - component: {fileID: 5586602314655702438}
-  - component: {fileID: 5586602314655702439}
   m_Layer: 0
   m_Name: floor_12
   m_TagString: Untagged
@@ -44036,20 +43934,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -2740574402364205910, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &5586602314655702439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5586602314655702437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!1 &5617066358572015141
 GameObject:
   m_ObjectHideFlags: 0
@@ -44062,7 +43946,6 @@ GameObject:
   - component: {fileID: 8760656219989667366}
   - component: {fileID: 1009125138701203141}
   - component: {fileID: 5617066358572015142}
-  - component: {fileID: 5617066358572015143}
   m_Layer: 0
   m_Name: floor_6
   m_TagString: Untagged
@@ -44084,20 +43967,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -3384187887294964074, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &5617066358572015143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5617066358572015141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!1 &5674292003154324790
 GameObject:
   m_ObjectHideFlags: 0
@@ -44110,7 +43979,6 @@ GameObject:
   - component: {fileID: 8674176956818729571}
   - component: {fileID: 9025956689098465621}
   - component: {fileID: 5674292003154324791}
-  - component: {fileID: 5674292003154324792}
   m_Layer: 0
   m_Name: floor_3
   m_TagString: Untagged
@@ -44132,20 +44000,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -8037873822753405285, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &5674292003154324792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674292003154324790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!33 &5758037298220997368
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44238,7 +44092,6 @@ GameObject:
   - component: {fileID: 3038030803916685641}
   - component: {fileID: 9149266012595356786}
   - component: {fileID: 6131185471927251655}
-  - component: {fileID: 6131185471927251656}
   m_Layer: 0
   m_Name: floor_11
   m_TagString: Untagged
@@ -44260,20 +44113,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 6168917654443217632, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &6131185471927251656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6131185471927251654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!4 &6200460728826451689
 Transform:
   m_ObjectHideFlags: 0
@@ -44300,7 +44139,6 @@ GameObject:
   - component: {fileID: 3872034213100806711}
   - component: {fileID: 8542496044310670590}
   - component: {fileID: 6231351647597080943}
-  - component: {fileID: 6231351647597080944}
   m_Layer: 0
   m_Name: floor_2
   m_TagString: Untagged
@@ -44322,20 +44160,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -795356012619241641, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &6231351647597080944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6231351647597080942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!33 &6270789349893243211
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44446,7 +44270,6 @@ GameObject:
   - component: {fileID: 8490332179159669007}
   - component: {fileID: 7430035764514689278}
   - component: {fileID: 7221449592604143138}
-  - component: {fileID: 7221449592604143139}
   m_Layer: 0
   m_Name: floor_9
   m_TagString: Untagged
@@ -44468,20 +44291,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 6160573423108985604, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &7221449592604143139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7221449592604143137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!4 &7229169481251317368
 Transform:
   m_ObjectHideFlags: 0
@@ -44756,7 +44565,6 @@ GameObject:
   - component: {fileID: 2906735555545449564}
   - component: {fileID: 8507763917761127809}
   - component: {fileID: 7827765041805488466}
-  - component: {fileID: 7827765041805488467}
   m_Layer: 0
   m_Name: floor_10
   m_TagString: Untagged
@@ -44778,20 +44586,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -4751879279776742240, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &7827765041805488467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7827765041805488465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!1 &8084044926822144340
 GameObject:
   m_ObjectHideFlags: 0
@@ -44902,7 +44696,6 @@ GameObject:
   - component: {fileID: 8377410508163381688}
   - component: {fileID: 7463522681096402430}
   - component: {fileID: 8396516091371077639}
-  - component: {fileID: 8396516091371077640}
   m_Layer: 0
   m_Name: floor_15
   m_TagString: Untagged
@@ -44924,20 +44717,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -9205944947088523340, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &8396516091371077640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8396516091371077638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
 --- !u!33 &8490332179159669007
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45238,7 +45017,6 @@ GameObject:
   - component: {fileID: 7204300378039035325}
   - component: {fileID: 6123373717730303625}
   - component: {fileID: 9205553565642571963}
-  - component: {fileID: 9205553565642571964}
   m_Layer: 0
   m_Name: floor_5
   m_TagString: Untagged
@@ -45260,17 +45038,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 3908758026775299890, guid: 6c0996f188add064fb76dc865525f4cb, type: 3}
---- !u!114 &9205553565642571964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9205553565642571962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26bd1b2218f9ca4bab6efd4c5b35c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileX: 1
-  tileY: 1
