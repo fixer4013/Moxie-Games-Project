@@ -14,7 +14,7 @@ public class DoorSide : MonoBehaviour
 
     void Awake()
     {
-        roomAudio = roomOnTheOtherSide.GetComponent<Rooms>().audioS;
+        roomAudio = roomOnTheOtherSide.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
