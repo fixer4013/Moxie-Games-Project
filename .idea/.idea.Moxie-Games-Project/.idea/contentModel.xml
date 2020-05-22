@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\marti\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\marti\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Moxie-Games-Project.-1927863901.00" t="ExcludeRecursive" />
+    <e p="P:\School stuff\Year 2\Block 3 and 4\Project\Moxie-Games-Project" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="ElevatorEndGame.cs" t="Include" />
+        <e p="GameFadeIn.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="ActualDoor.cs" t="Include" />
+          <e p="AIMaze.cs" t="Include" />
+          <e p="AIOpenDoors.cs" t="Include" />
+          <e p="ClothGuyRandomRoaming.cs" t="Include" />
+          <e p="DimensionCamera.cs" t="Include" />
+          <e p="DoorMechanics.cs" t="Include" />
+          <e p="DoorSide.cs" t="Include" />
+          <e p="ElevatorIntro.cs" t="Include" />
+          <e p="ElevatorTrigger.cs" t="Include" />
+          <e p="EnableMouse.cs" t="Include" />
+          <e p="EnemySmokeTest.cs" t="Include" />
+          <e p="EventDoorSlam.cs" t="Include" />
+          <e p="EventPeekABoo.cs" t="Include" />
+          <e p="FootstepsSound.cs" t="Include" />
+          <e p="GoToSleep.cs" t="Include" />
+          <e p="IncreaseVignette.cs" t="Include" />
+          <e p="Interactable.cs" t="Include" />
+          <e p="keyholeCamera.cs" t="Include" />
+          <e p="KillPlayer.cs" t="Include" />
+          <e p="LightShadowBias.cs" t="Include" />
+          <e p="LookAtInteractable.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
+          <e p="NewDoorMechanics.cs" t="Include" />
+          <e p="PauseScreen.cs" t="Include" />
+          <e p="PhysicalDoor.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="RoomAudio.cs" t="Include" />
+          <e p="RoomBadOrGood.cs" t="Include" />
+          <e p="RoomNumber.cs" t="Include" />
+          <e p="Rooms.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Moxie-Games-Project.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
