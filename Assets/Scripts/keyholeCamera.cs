@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class keyholeCamera : MonoBehaviour
 {
-    public float mouseSensitivity = 15f;
+    float mouseSensitivity = 80f;
 
     float xRotation = 0f;
     float yRotation = 0f;

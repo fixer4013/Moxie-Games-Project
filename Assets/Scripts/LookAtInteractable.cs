@@ -22,8 +22,15 @@ public class LookAtInteractable : MonoBehaviour
         {
             Interact();
             txt.enabled = true;
+            if (currentObject.GetComponent<ActualDoor>())
+            {
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.isInteracting)
+                {
+                    txt.enabled = false;
+                }
+            }
         }
-        if (currentObject == null || currentObject.GetComponent<ActualDoor>().doorMechanics.isInteracting)
+        if (currentObject == null)
         {
             txt.enabled = false;
         }
@@ -40,10 +47,14 @@ public class LookAtInteractable : MonoBehaviour
 
         {
             currentObject = hit.transform.gameObject;
-            if (currentObject.GetComponent<ActualDoor>().doorMechanics.open || currentObject.GetComponent<ActualDoor>().doorMechanics.doorAnimating)
+            if (currentObject.GetComponent<ActualDoor>())
             {
-                currentObject = null;
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.open || currentObject.GetComponent<ActualDoor>().doorMechanics.doorAnimating)
+                {
+                    currentObject = null;
+                }
             }
+
         }
         else
         {
@@ -60,6 +71,10 @@ public class LookAtInteractable : MonoBehaviour
             if (currentObject.GetComponent<ActualDoor>())
             {
                 StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.DoorOpenAnimation());
+            }
+            if (currentObject.GetComponent<GoToSleep>())
+            {
+                StartCoroutine(currentObject.GetComponent<GoToSleep>().Sleep());
             }
         }
 

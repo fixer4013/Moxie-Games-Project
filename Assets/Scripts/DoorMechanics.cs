@@ -14,6 +14,7 @@ public class DoorMechanics : MonoBehaviour
     public bool open;
     public AudioSource openDoorSound;
     public int doorknobSpot; //1 = left, 2 = right
+    public bool locked;
 
     //KNOCKING MECHANICS
     public AudioSource knockingAudio;
@@ -77,41 +78,44 @@ public class DoorMechanics : MonoBehaviour
     //DOOR OPENING AND CLOSING MECHANICS
     public IEnumerator DoorOpenAnimation()
     {
-        anim.Play("OpenDoor");
         openDoorSound.Play();
-        doorAnimating = true;
-        var dist = 2.2f;
-        var tempPos = Vector3.zero;
-        if (side1.isPlayerNear)
+
+        if (!locked)
         {
-            if (doorknobSpot == 1)
+            anim.Play("OpenDoor");
+            doorAnimating = true;
+            var dist = 2.2f;
+            var tempPos = Vector3.zero;
+            if (side1.isPlayerNear)
             {
-                tempPos = transform.position + transform.forward * -0.87f + transform.up * -0.5f;
-                Debug.Log(tempPos);
-                dist = Vector3.Distance(player.transform.position, tempPos);
-            }
-            else
-            {
-                tempPos = transform.position + transform.forward * 0.87f + transform.up * -0.5f;
-                dist = Vector3.Distance(player.transform.position, tempPos);
+                if (doorknobSpot == 1)
+                {
+                    tempPos = transform.position + transform.forward * -0.87f + transform.up * -0.5f;
+                    dist = Vector3.Distance(player.transform.position, tempPos);
+                }
+                else
+                {
+                    tempPos = transform.position + transform.forward * 0.87f + transform.up * -0.5f;
+                    dist = Vector3.Distance(player.transform.position, tempPos);
+                }
+                for (float i = 0; i < 2.2f-dist; i += Time.deltaTime)
+                {
+                    if (Vector3.Distance(player.transform.position, tempPos) >= 2.2f)
+                    {
+                        dist = 2.2f - i;
+                        i = 2.2f;
+                    }
+                    player.transform.position += new Vector3((player.transform.position - tempPos).normalized.x, 0, (player.transform.position - tempPos).normalized.z) * 2 * Time.deltaTime;
+                    yield return 0;
+                }
             }
             Debug.Log(dist);
-            for (float i = 0; i < 2.2f-dist; i += Time.deltaTime)
-            {
-                if (Vector3.Distance(player.transform.position, tempPos) >= 2.2f)
-                {
-                    dist = i;
-                    i = 2.2f;
-                }
-                player.transform.position += new Vector3((player.transform.position - tempPos).normalized.x, 0, (player.transform.position - tempPos).normalized.z) * 2 * Time.deltaTime;
-                yield return 0;
-            }
+            yield return new WaitForSeconds(3 - (2.2f-dist));
+
+            open = true;
+            doorAnimating = false;
         }
-
-        yield return new WaitForSeconds(3 - (2.2f-dist));
-
-        open = true;
-        doorAnimating = false;
+        
     }
 
     //DOOR OPENING AND CLOSING MECHANICS
