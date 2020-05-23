@@ -11,6 +11,8 @@ public class EventPeekABoo : MonoBehaviour
     public Texture originalTexture;
     public GameObject cam;
 
+    public LockedDoorEndHallway LDRH;
+
     public bool pickedUp;
     public bool inEvent;
 
@@ -42,6 +44,7 @@ public class EventPeekABoo : MonoBehaviour
             rawIm.texture = peekABooTexture;
             dm.locked = true;
             Debug.Log("test");
+            LDRH.amountOfEventsToBeDone -= 1;
         }
     }
 

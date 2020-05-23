@@ -9,6 +9,8 @@ public class EventDoorSlam : MonoBehaviour
     public GameObject player;
     public AudioSource audioS;
 
+    public LockedDoorEndHallway LDRH;
+
     bool pickedUp;
     bool closeToDoor;
     // Start is called before the first frame update
@@ -22,7 +24,7 @@ public class EventDoorSlam : MonoBehaviour
     {
         if (pickedUp)
         {
-            if (Vector3.Distance(player.transform.position, dm.gameObject.transform.position) <= 3 && !closeToDoor)
+            if (Vector3.Distance(player.transform.position, dm.gameObject.transform.position) <= 6 && !closeToDoor)
             {
                 closeToDoor = true;
                 StartCoroutine(DoorSlam());
@@ -39,6 +41,7 @@ public class EventDoorSlam : MonoBehaviour
             anim.Play("EventDoorSlam");
             anim.speed = 0;
             gameObject.GetComponent<MeshRenderer>().enabled = false;
+            LDRH.amountOfEventsToBeDone -= 1;
         }
     }
 

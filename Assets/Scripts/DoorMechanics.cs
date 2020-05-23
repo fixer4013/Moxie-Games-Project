@@ -13,6 +13,8 @@ public class DoorMechanics : MonoBehaviour
     public bool doorAnimating;
     public bool open;
     public AudioSource openDoorSound;
+    public AudioClip openDoor;
+    public AudioClip lockedDoor;
     public int doorknobSpot; //1 = left, 2 = right
     public bool locked;
 
@@ -78,10 +80,13 @@ public class DoorMechanics : MonoBehaviour
     //DOOR OPENING AND CLOSING MECHANICS
     public IEnumerator DoorOpenAnimation()
     {
+        openDoorSound.clip = lockedDoor;
         openDoorSound.Play();
 
         if (!locked)
         {
+            openDoorSound.clip = openDoor;
+            openDoorSound.Play();
             anim.Play("OpenDoor");
             doorAnimating = true;
             var dist = 2.2f;
