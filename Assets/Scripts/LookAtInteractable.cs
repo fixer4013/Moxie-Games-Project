@@ -34,7 +34,7 @@ public class LookAtInteractable : MonoBehaviour
         {
             txt.enabled = false;
         }
-        Debug.Log(currentObject);
+
     }
 
     void LookAt()

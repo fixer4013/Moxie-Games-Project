@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DimensionCamera : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    float mouseSensitivity;
 
     public Transform playerBody;
 
@@ -20,6 +20,7 @@ public class DimensionCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mouseSensitivity = OptionsVariables.generalMouseSensitivity;
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 

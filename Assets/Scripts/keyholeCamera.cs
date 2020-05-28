@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class keyholeCamera : MonoBehaviour
 {
-    float mouseSensitivity = 80f;
+    float mouseSensitivity;
 
     float xRotation = 0f;
     float yRotation = 0f;
@@ -19,6 +19,7 @@ public class keyholeCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mouseSensitivity = OptionsVariables.generalMouseSensitivity * 0.4f;
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 

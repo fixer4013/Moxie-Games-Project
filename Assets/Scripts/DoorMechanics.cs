@@ -114,7 +114,6 @@ public class DoorMechanics : MonoBehaviour
                     yield return 0;
                 }
             }
-            Debug.Log(dist);
             yield return new WaitForSeconds(3 - (2.2f-dist));
 
             open = true;

@@ -38,7 +38,7 @@ public class ElevatorIntro : MonoBehaviour
     {
         aud.clip = elevatorSound;
         aud.Play();
-        yield return new WaitForSeconds(24f);
+        yield return new WaitForSeconds(22.5f);
 
         for (float i = 0; i < 2; i += Time.deltaTime)
         {

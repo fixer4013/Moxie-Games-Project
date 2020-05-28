@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PauseScreen : MonoBehaviour
 {
-    public GameObject playerCamera;
     public GameObject pauseScreenObjects;
     public bool paused;
+
+    public GameObject pauseMenu;
+    public GameObject optionsMenu;
 
     // Update is called once per frame
     void Update()
@@ -28,20 +30,22 @@ public class PauseScreen : MonoBehaviour
     {
         paused = true;
         Time.timeScale = 0;
-        playerCamera.SetActive(false);
         pauseScreenObjects.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        AudioListener.pause = true;
     }
 
     public void UnpauseGame()
     {
         paused = false;
+        pauseMenu.SetActive(true);
+        optionsMenu.SetActive(false);
         Time.timeScale = 1;
-        playerCamera.SetActive(true);
         pauseScreenObjects.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        AudioListener.pause = false;
     }
 
     public void QuitGame()
