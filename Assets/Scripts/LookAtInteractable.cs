@@ -71,7 +71,7 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.GetComponent<ActualDoor>())
             {
-                StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.DoorOpenAnimation());
+                StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.DoorOpenAnimation(1, false));
             }
             if (currentObject.GetComponent<GoToSleep>())
             {

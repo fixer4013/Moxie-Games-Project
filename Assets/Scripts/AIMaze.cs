@@ -31,24 +31,24 @@ public class AIMaze : MonoBehaviour
             Invoke("ChooseTarget", 2f);
         }
 
-        if (RoomNumber.roomNumberEnemy == RoomNumber.roomnumberPlayer)
-        {
-            inSameRoomAsPlayer = true;
-            if (player.x != 0 || player.z != 0)
-            {
-                isChasingPlayer = true;
-                agent.SetDestination(player.transform.position);
-                agent.speed = maxSpeed * 2;
-            }
-            else
-            {
-                isChasingPlayer = false;
-            }
-        }
-        else
-        {
-            inSameRoomAsPlayer = false;
-        }
+        //if (RoomNumber.roomNumberEnemy == RoomNumber.roomnumberPlayer)
+        //{
+        //    inSameRoomAsPlayer = true;
+        //    if (player.x != 0 || player.z != 0)
+        //    {
+        //        isChasingPlayer = true;
+        //        agent.SetDestination(player.transform.position);
+        //        agent.speed = maxSpeed * 2;
+        //    }
+        //    else
+        //    {
+        //        isChasingPlayer = false;
+        //    }
+        //}
+        //else
+        //{
+        //    inSameRoomAsPlayer = false;
+        //}
     }
 
     void ChooseTarget()

@@ -18,6 +18,10 @@ public class DoorMechanics : MonoBehaviour
     public int doorknobSpot; //1 = left, 2 = right
     public bool locked;
 
+    //DOOR OPENING MECHANICS ENEMY
+    public bool enemyIsNear;
+    public NavMeshAgent enemyNav;
+
     //KNOCKING MECHANICS
     public AudioSource knockingAudio;
 
@@ -51,10 +55,16 @@ public class DoorMechanics : MonoBehaviour
     {
 
         //DOOR OPENING AND CLOSING MECHANICS
-        if (open && !side1.isPlayerNear && !side2.isPlayerNear)
+        if (open && !side1.isPlayerNear && !side2.isPlayerNear && !enemyIsNear)
         {
             StartCoroutine(DoorCloseAnimation());
         }
+
+        if (!open && !doorAnimating && enemyIsNear)
+        {
+            StartCoroutine(DoorOpenAnimation(0.5f, true));
+        }
+        enemyIsNear = false;
 
         //PEEKING MECHANICS
         if (peeking)
@@ -78,7 +88,7 @@ public class DoorMechanics : MonoBehaviour
 
 
     //DOOR OPENING AND CLOSING MECHANICS
-    public IEnumerator DoorOpenAnimation()
+    public IEnumerator DoorOpenAnimation(float animSpeed, bool isEnemy)
     {
         openDoorSound.clip = lockedDoor;
         openDoorSound.Play();
@@ -88,6 +98,7 @@ public class DoorMechanics : MonoBehaviour
             openDoorSound.clip = openDoor;
             openDoorSound.Play();
             anim.Play("OpenDoor");
+            anim.speed = animSpeed;
             doorAnimating = true;
             var dist = 2.2f;
             var tempPos = Vector3.zero;
@@ -114,8 +125,16 @@ public class DoorMechanics : MonoBehaviour
                     yield return 0;
                 }
             }
-            yield return new WaitForSeconds(3 - (2.2f-dist));
-
+            if (isEnemy)
+            {
+                enemyNav.speed = 0;
+            }
+            yield return new WaitForSeconds((3 - (2.2f-dist))/animSpeed);
+            anim.speed = 1;
+            if (isEnemy)
+            {
+                enemyNav.speed = enemyNav.GetComponent<AIMaze>().maxSpeed;
+            }
             open = true;
             doorAnimating = false;
         }

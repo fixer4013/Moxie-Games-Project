@@ -9,6 +9,7 @@ public class PauseScreen : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject optionsMenu;
+    public GameObject howToPlayMenu;
 
     // Update is called once per frame
     void Update()
@@ -41,6 +42,7 @@ public class PauseScreen : MonoBehaviour
         paused = false;
         pauseMenu.SetActive(true);
         optionsMenu.SetActive(false);
+        howToPlayMenu.SetActive(false);
         Time.timeScale = 1;
         pauseScreenObjects.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;

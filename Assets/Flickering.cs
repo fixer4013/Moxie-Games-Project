@@ -4,48 +4,35 @@ using UnityEngine;
 
 public class Flickering : MonoBehaviour
 {
-    float lightStrength;
     Light lampLight;
     public Light otherLight;
     bool flickeringOn = true;
 
+    float timer;
+
     void Start()
     {
         lampLight = GetComponent<Light>();
-        lightStrength = lampLight.intensity;
 
-        if (flickeringOn == true)
-        {
-            StartCoroutine(FlickeringLight());
-        }
+        timer = Random.Range(0.3f, 0.8f);
     }
 
-    IEnumerator FlickeringLight()
+    private void Update()
     {
-        while (true)
+        FlickeringLight();
+    }
+
+    void FlickeringLight()
+    {
+        if (timer > 0)
         {
-            float rand3 = Random.Range(0, 20);
-            float rand2;
-            if (rand3 >= 15)
-            {
-                rand2 = Random.Range(16, 20);
-            }
-            else
-            {
-                rand2 = Random.Range(16, 18);
-            }
-            float rand = Random.Range(0, rand2);
-            if (rand >= 16)
-            {
-                lampLight.intensity = 0f;
-                otherLight.intensity = 0f;
-            }
-            else
-            {
-                lampLight.intensity = lightStrength;
-                otherLight.intensity = lightStrength;
-            }
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+            timer -= Time.deltaTime;
+        }
+        else
+        {
+            lampLight.enabled = !lampLight.enabled;
+            otherLight.enabled = !otherLight.enabled;
+            timer = Random.Range(0.15f, 0.8f);
         }
     }
 }
