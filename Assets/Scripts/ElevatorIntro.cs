@@ -15,6 +15,12 @@ public class ElevatorIntro : MonoBehaviour
     public Animator animFadeIn;
 
     public Animator animElevatorDoors;
+
+    public Animator instructionsMoving;
+    public Animator instructionsLooking;
+    bool movedAround;
+    bool lookedAround;
+
     private void Awake()
     {
         player.GetComponent<PlayerMovement>().enabled = false;
@@ -60,6 +66,42 @@ public class ElevatorIntro : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = true;
         player.GetComponent<CharacterController>().enabled = true;
         cam.enabled = true;
+
+        instructionsMoving.Play("InstructionsFadeIn");
+        instructionsLooking.Play("InstructionsFadeIn");
+
+        StartCoroutine(CheckMovedAround());
+        StartCoroutine(CheckLookedAround());
+
         yield return 0;
+    }
+
+    IEnumerator CheckMovedAround()
+    {
+        yield return new WaitForSeconds(3f);
+        while (!movedAround)
+        {
+            var tempPos = player.transform.position;
+            yield return 0;
+            if (player.transform.position != tempPos)
+            {
+                instructionsMoving.Play("InstructionsFadeOut");
+                movedAround = true;
+            }
+        }
+    }
+    IEnumerator CheckLookedAround()
+    {
+        yield return new WaitForSeconds(3f);
+        while (!lookedAround)
+        {
+            var tempRot = cam.xRotation;
+            yield return 0;
+            if (cam.xRotation != tempRot)
+            {
+                instructionsLooking.Play("InstructionsFadeOut");
+                lookedAround = true;
+            }
+        }
     }
 }

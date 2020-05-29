@@ -11,13 +11,10 @@ public class EventDoorSlam : MonoBehaviour
 
     public LockedDoorEndHallway LDRH;
 
+    public ParticleSystem part;
+
     bool pickedUp;
     bool closeToDoor;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -50,6 +47,7 @@ public class EventDoorSlam : MonoBehaviour
         anim.speed = 1;
         yield return new WaitForSeconds(0.1f);
         audioS.Play();
+        part.Play();
         dm.enabled = true;
         yield return new WaitForSeconds(1f);
         this.gameObject.SetActive(false);

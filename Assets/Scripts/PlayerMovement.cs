@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
         {
-            staminaBar.value -= Time.deltaTime * 0.2f;
+            staminaBar.value -= Time.deltaTime * 0.13f;
         }
     }
 
