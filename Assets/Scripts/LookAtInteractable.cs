@@ -23,6 +23,7 @@ public class LookAtInteractable : MonoBehaviour
         LookAt();
         if (currentObject != null)
         {
+            crosshairHand.enabled = true;
             Interact();
             if (currentObject.GetComponent<ActualDoor>())
             {
@@ -30,13 +31,14 @@ public class LookAtInteractable : MonoBehaviour
                 if (currentObject.GetComponent<ActualDoor>().doorMechanics.isInteracting)
                 {
                     doorTxt.enabled = false;
+                    crosshairHand.enabled = false;
                 }
             }
             if (currentObject.GetComponent<KeyPickUp>())
             {
                 keyTxt.enabled = true;
             }
-            crosshairHand.enabled = true;
+            
         }
         if (currentObject == null)
         {

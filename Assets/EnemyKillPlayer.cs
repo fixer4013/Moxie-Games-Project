@@ -22,14 +22,14 @@ public class EnemyKillPlayer : MonoBehaviour
     {
         if (!killingPlayer)
         {
-            if (Vector3.Distance(player.transform.position, transform.position) < 3)
+            if (Vector3.Distance(player.transform.position, transform.position) < 2.3)
             {
                 killingPlayer = true;
                 cam.enabled = false;
                 player.GetComponent<PlayerMovement>().enabled = false;
                 player.GetComponent<CharacterController>().enabled = false;
                 anim.Play("IntroFadeOut");
-                Invoke("Death", 3);
+                Invoke("Death", 6);
             }
         }
 
