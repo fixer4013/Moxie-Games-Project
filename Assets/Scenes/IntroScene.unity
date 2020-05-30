@@ -25609,7 +25609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc9228038c7d204d8001e7b6b50051d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherLight: {fileID: 883707424}
 --- !u!1 &582493230
 GameObject:
   m_ObjectHideFlags: 0
@@ -67539,7 +67538,8 @@ MonoBehaviour:
   layerInteractables:
     serializedVersion: 2
     m_Bits: 512
-  txt: {fileID: 558053352}
+  doorTxt: {fileID: 558053352}
+  keyTxt: {fileID: 0}
 --- !u!143 &1980661571
 CharacterController:
   m_ObjectHideFlags: 0

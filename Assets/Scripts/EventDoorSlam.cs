@@ -9,8 +9,6 @@ public class EventDoorSlam : MonoBehaviour
     public GameObject player;
     public AudioSource audioS;
 
-    public LockedDoorEndHallway LDRH;
-
     public ParticleSystem part;
 
     bool pickedUp;
@@ -31,14 +29,12 @@ public class EventDoorSlam : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!pickedUp)
+        if (!pickedUp && other.GetComponent<PlayerMovement>())
         {
             pickedUp = true;
             dm.enabled = true;
             anim.Play("EventDoorSlam");
             anim.speed = 0;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
-            LDRH.amountOfEventsToBeDone -= 1;
         }
     }
 

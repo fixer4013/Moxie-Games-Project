@@ -10,8 +10,7 @@ public class EventPeekABoo : MonoBehaviour
     public Texture peekABooTexture;
     public Texture originalTexture;
     public GameObject cam;
-
-    public LockedDoorEndHallway LDRH;
+    public AudioSource audioS;
 
     public bool pickedUp;
     public bool inEvent;
@@ -37,14 +36,11 @@ public class EventPeekABoo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!pickedUp)
+        if (!pickedUp && other.GetComponent<PlayerMovement>())
         {
             pickedUp = true;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
             rawIm.texture = peekABooTexture;
             dm.locked = true;
-            Debug.Log("test");
-            LDRH.amountOfEventsToBeDone -= 1;
         }
     }
 
@@ -52,6 +48,7 @@ public class EventPeekABoo : MonoBehaviour
     {
         Debug.Log("test2");
         dm.locked = false;
+        audioS.Play();
         yield return new WaitForSeconds(1f);
         rawIm.texture = originalTexture;
         yield return new WaitForSeconds(1);

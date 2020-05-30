@@ -5,7 +5,6 @@ using UnityEngine;
 public class Flickering : MonoBehaviour
 {
     Light lampLight;
-    public Light otherLight;
     bool flickeringOn = true;
 
     float timer;
@@ -31,7 +30,6 @@ public class Flickering : MonoBehaviour
         else
         {
             lampLight.enabled = !lampLight.enabled;
-            otherLight.enabled = !otherLight.enabled;
             timer = Random.Range(0.15f, 0.8f);
         }
     }

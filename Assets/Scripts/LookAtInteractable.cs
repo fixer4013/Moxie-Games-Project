@@ -13,7 +13,8 @@ public class LookAtInteractable : MonoBehaviour
 
     public LayerMask layerInteractables;
 
-    public TextMeshProUGUI txt;
+    public TextMeshProUGUI doorTxt;
+    public TextMeshProUGUI keyTxt;
 
     void Update()
     {
@@ -21,18 +22,26 @@ public class LookAtInteractable : MonoBehaviour
         if (currentObject != null)
         {
             Interact();
-            txt.enabled = true;
             if (currentObject.GetComponent<ActualDoor>())
             {
+                doorTxt.enabled = true;
                 if (currentObject.GetComponent<ActualDoor>().doorMechanics.isInteracting)
                 {
-                    txt.enabled = false;
+                    doorTxt.enabled = false;
                 }
+            }
+            if (currentObject.GetComponent<KeyPickUp>())
+            {
+                keyTxt.enabled = true;
             }
         }
         if (currentObject == null)
         {
-            txt.enabled = false;
+            doorTxt.enabled = false;
+            if (keyTxt != null)
+            {
+                keyTxt.enabled = false;
+            }
         }
 
     }
@@ -76,6 +85,10 @@ public class LookAtInteractable : MonoBehaviour
             if (currentObject.GetComponent<GoToSleep>())
             {
                 StartCoroutine(currentObject.GetComponent<GoToSleep>().Sleep());
+            }
+            if (currentObject.GetComponent<KeyPickUp>())
+            {
+                currentObject.GetComponent<KeyPickUp>().OpenDoor();
             }
         }
 
