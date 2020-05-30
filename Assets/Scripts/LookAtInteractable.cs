@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class LookAtInteractable : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class LookAtInteractable : MonoBehaviour
 
     public TextMeshProUGUI doorTxt;
     public TextMeshProUGUI keyTxt;
+    public RawImage crosshairHand;
 
     void Update()
     {
@@ -34,6 +36,7 @@ public class LookAtInteractable : MonoBehaviour
             {
                 keyTxt.enabled = true;
             }
+            crosshairHand.enabled = true;
         }
         if (currentObject == null)
         {
@@ -42,6 +45,7 @@ public class LookAtInteractable : MonoBehaviour
             {
                 keyTxt.enabled = false;
             }
+            crosshairHand.enabled = false;
         }
 
     }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Flickering : MonoBehaviour
 {
     Light lampLight;
-    bool flickeringOn = true;
 
     float timer;
 
