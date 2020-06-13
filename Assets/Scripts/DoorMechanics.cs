@@ -17,6 +17,7 @@ public class DoorMechanics : MonoBehaviour
     public AudioClip lockedDoor;
     public int doorknobSpot; //1 = left, 2 = right
     public bool locked;
+    public Animator isLockedUI;
 
     //DOOR OPENING MECHANICS ENEMY
     public bool enemyIsNear;
@@ -53,7 +54,6 @@ public class DoorMechanics : MonoBehaviour
 
     private void Update()
     {
-
         //DOOR OPENING AND CLOSING MECHANICS
         if (open && !side1.isPlayerNear && !side2.isPlayerNear && !enemyIsNear)
         {
@@ -62,7 +62,7 @@ public class DoorMechanics : MonoBehaviour
 
         if (!open && !doorAnimating && enemyIsNear)
         {
-            StartCoroutine(DoorOpenAnimation(0.5f, true));
+            StartCoroutine(DoorOpenAnimation(1f, true));
         }
         enemyIsNear = false;
 
@@ -92,7 +92,13 @@ public class DoorMechanics : MonoBehaviour
     {
         openDoorSound.clip = lockedDoor;
         openDoorSound.Play();
-
+        if (locked)
+        {
+            if (isLockedUI.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                isLockedUI.Play("IsLockedAnimation");
+            }
+        }
         if (!locked)
         {
             openDoorSound.clip = openDoor;
@@ -142,7 +148,7 @@ public class DoorMechanics : MonoBehaviour
     }
 
     //DOOR OPENING AND CLOSING MECHANICS
-    IEnumerator DoorCloseAnimation()
+    public IEnumerator DoorCloseAnimation()
     {
         anim.Play("CloseDoor");
         doorAnimating = true;

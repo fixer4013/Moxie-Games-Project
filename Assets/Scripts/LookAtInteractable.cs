@@ -14,7 +14,9 @@ public class LookAtInteractable : MonoBehaviour
 
     public LayerMask layerInteractables;
 
-    public TextMeshProUGUI doorTxt;
+    public TextMeshProUGUI interactTxt;
+    public TextMeshProUGUI peekTxt;
+    public TextMeshProUGUI listeningTxt;
     public TextMeshProUGUI keyTxt;
     public RawImage crosshairHand;
 
@@ -27,10 +29,14 @@ public class LookAtInteractable : MonoBehaviour
             Interact();
             if (currentObject.GetComponent<ActualDoor>())
             {
-                doorTxt.enabled = true;
+                interactTxt.enabled = true;
+                peekTxt.enabled = true;
+                listeningTxt.enabled = true;
                 if (currentObject.GetComponent<ActualDoor>().doorMechanics.isInteracting)
                 {
-                    doorTxt.enabled = false;
+                    interactTxt.enabled = false;
+                    peekTxt.enabled = false;
+                    listeningTxt.enabled = false;
                     crosshairHand.enabled = false;
                 }
             }
@@ -42,7 +48,9 @@ public class LookAtInteractable : MonoBehaviour
         }
         if (currentObject == null)
         {
-            doorTxt.enabled = false;
+            interactTxt.enabled = false;
+            peekTxt.enabled = false;
+            listeningTxt.enabled = false;
             if (keyTxt != null)
             {
                 keyTxt.enabled = false;
@@ -86,7 +94,7 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.GetComponent<ActualDoor>())
             {
-                StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.DoorOpenAnimation(1, false));
+                StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.DoorOpenAnimation(2, false));
             }
             if (currentObject.GetComponent<GoToSleep>())
             {
@@ -102,7 +110,10 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.GetComponent<ActualDoor>())
             {
-                currentObject.GetComponent<ActualDoor>().doorMechanics.Knocking();
+                if (GameStates.knockingEnabled)
+                {
+                    currentObject.GetComponent<ActualDoor>().doorMechanics.Knocking();
+                }
             }
         }
 
@@ -110,13 +121,16 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.GetComponent<ActualDoor>())
             {
-                if (currentObject.GetComponent<ActualDoor>().doorMechanics.side1.isPlayerNear)
+                if (GameStates.peekingEnabled)
                 {
-                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.PeekingSide1());
-                }
-                if (currentObject.GetComponent<ActualDoor>().doorMechanics.side2.isPlayerNear)
-                {
-                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.PeekingSide2());
+                    if (currentObject.GetComponent<ActualDoor>().doorMechanics.side1.isPlayerNear)
+                    {
+                        StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.PeekingSide1());
+                    }
+                    if (currentObject.GetComponent<ActualDoor>().doorMechanics.side2.isPlayerNear)
+                    {
+                        StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.PeekingSide2());
+                    }
                 }
             }
         }
@@ -125,14 +139,18 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.GetComponent<ActualDoor>())
             {
-                if (currentObject.GetComponent<ActualDoor>().doorMechanics.side1.isPlayerNear)
+                if (GameStates.listeningEnabled)
                 {
-                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.ListeningSide1());
+                    if (currentObject.GetComponent<ActualDoor>().doorMechanics.side1.isPlayerNear)
+                    {
+                        StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.ListeningSide1());
+                    }
+                    if (currentObject.GetComponent<ActualDoor>().doorMechanics.side2.isPlayerNear)
+                    {
+                        StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.ListeningSide2());
+                    }
                 }
-                if (currentObject.GetComponent<ActualDoor>().doorMechanics.side2.isPlayerNear)
-                {
-                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.ListeningSide2());
-                }
+
             }
         }
     }

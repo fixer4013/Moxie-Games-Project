@@ -2,7 +2,16 @@ fileFormatVersion: 2
 guid: 3803c18163cc70740a20154c165ac46f
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -3731087123307905912
+    second: NormalUnwrapped|Cube.045|Take 001|BaseLayer
+  - first:
+      74: 8047158067383305308
+    second: NormalUnwrapped|Normal.001|Take 001|BaseLayer
+  - first:
+      74: -701773000614835501
+    second: NormalUnwrapped|Sphere.004|Take 001|BaseLayer
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -87,7 +96,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
