@@ -13,13 +13,7 @@ public class IntroSceneObjective : MonoBehaviour
         if (other.GetComponent<PlayerMovement>() && !activated)
         {
             anim.Play("InstructionsFadeIn");
-            Invoke("FadeOut", 10f);
             activated = true;
         }
-    }
-
-    void FadeOut()
-    {
-        anim.Play("InstructionsFadeOut");
     }
 }

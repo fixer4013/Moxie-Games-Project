@@ -14,30 +14,56 @@ public class LookAtInteractable : MonoBehaviour
 
     public LayerMask layerInteractables;
 
-    public TextMeshProUGUI interactTxt;
-    public TextMeshProUGUI peekTxt;
-    public TextMeshProUGUI listeningTxt;
+    public Image interactIcon;
+    public Image peekIcon;
+    public Image listeningIcon;
     public TextMeshProUGUI keyTxt;
-    public RawImage crosshairHand;
 
     void Update()
     {
         LookAt();
         if (currentObject != null)
         {
-            crosshairHand.enabled = true;
+            interactIcon.color = new Color(255, 255, 255, 1f);
             Interact();
             if (currentObject.GetComponent<ActualDoor>())
             {
-                interactTxt.enabled = true;
-                peekTxt.enabled = true;
-                listeningTxt.enabled = true;
+                var dm = currentObject.GetComponent<ActualDoor>().doorMechanics;
+                if (dm.openable)
+                {
+                    interactIcon.color = new Color(255, 255, 255, 1f);
+                }
+                else
+                {
+                    interactIcon.color = new Color(255, 255, 255, .2f);
+                }
+                if (dm.peekable)
+                {
+                    peekIcon.color = new Color(255, 255, 255, 1f);
+                }
+                else
+                {
+                    peekIcon.color = new Color(255, 255, 255, .2f);
+                }
+                if (dm.listenable)
+                {
+                    listeningIcon.color = new Color(255, 255, 255, 1f);
+                }
+                else
+                {
+                    listeningIcon.color = new Color(255, 255, 255, .2f);
+                }
                 if (currentObject.GetComponent<ActualDoor>().doorMechanics.isInteracting)
                 {
-                    interactTxt.enabled = false;
-                    peekTxt.enabled = false;
-                    listeningTxt.enabled = false;
-                    crosshairHand.enabled = false;
+                    interactIcon.enabled = false;
+                    peekIcon.enabled = false;
+                    listeningIcon.enabled = false;
+                }
+                else
+                {
+                    interactIcon.enabled = true;
+                    peekIcon.enabled = true;
+                    listeningIcon.enabled = true;
                 }
             }
             if (currentObject.GetComponent<KeyPickUp>())
@@ -48,14 +74,14 @@ public class LookAtInteractable : MonoBehaviour
         }
         if (currentObject == null)
         {
-            interactTxt.enabled = false;
-            peekTxt.enabled = false;
-            listeningTxt.enabled = false;
+            interactIcon.color = new Color(255, 255, 255, .2f);
+            peekIcon.color = new Color(255, 255, 255, .2f);
+            listeningIcon.color = new Color(255, 255, 255, .2f);
             if (keyTxt != null)
             {
                 keyTxt.enabled = false;
             }
-            crosshairHand.enabled = false;
+            interactIcon.color = new Color(255, 255, 255, .2f);
         }
 
     }
@@ -94,7 +120,10 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.GetComponent<ActualDoor>())
             {
-                StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.DoorOpenAnimation(2, false));
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.openable)
+                {
+                    StartCoroutine(currentObject.GetComponent<ActualDoor>().doorMechanics.DoorOpenAnimation(2, false));
+                }
             }
             if (currentObject.GetComponent<GoToSleep>())
             {
@@ -106,22 +135,22 @@ public class LookAtInteractable : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (currentObject.GetComponent<ActualDoor>())
-            {
-                if (GameStates.knockingEnabled)
-                {
-                    currentObject.GetComponent<ActualDoor>().doorMechanics.Knocking();
-                }
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    if (currentObject.GetComponent<ActualDoor>())
+        //    {
+        //        if (currentObject.GetComponent<ActualDoor>().doorMechanics.knockable)
+        //        {
+        //            currentObject.GetComponent<ActualDoor>().doorMechanics.Knocking();
+        //        }
+        //    }
+        //}
 
         if (Input.GetMouseButtonDown(0))
         {
             if (currentObject.GetComponent<ActualDoor>())
             {
-                if (GameStates.peekingEnabled)
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.peekable)
                 {
                     if (currentObject.GetComponent<ActualDoor>().doorMechanics.side1.isPlayerNear)
                     {
@@ -139,7 +168,7 @@ public class LookAtInteractable : MonoBehaviour
         {
             if (currentObject.GetComponent<ActualDoor>())
             {
-                if (GameStates.listeningEnabled)
+                if (currentObject.GetComponent<ActualDoor>().doorMechanics.listenable)
                 {
                     if (currentObject.GetComponent<ActualDoor>().doorMechanics.side1.isPlayerNear)
                     {

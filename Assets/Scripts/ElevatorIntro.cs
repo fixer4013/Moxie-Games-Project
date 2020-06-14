@@ -11,6 +11,7 @@ public class ElevatorIntro : MonoBehaviour
     public AudioSource aud;
     public AudioClip elevatorSound;
     public AudioClip plingSound;
+    public AudioClip elevatorOpenDoor;
 
     public Animator animFadeIn;
 
@@ -45,15 +46,7 @@ public class ElevatorIntro : MonoBehaviour
         aud.clip = elevatorSound;
         aud.Play();
         yield return new WaitForSeconds(22.5f);
-
-        for (float i = 0; i < 2; i += Time.deltaTime)
-        {
-            aud.volume = 1 - i/2;
-            yield return 0;
-        }
-        yield return new WaitForSeconds(1.5f);
         aud.clip = plingSound;
-        aud.volume = 1;
         aud.Play();
         
         yield return new WaitForSeconds(1f);
@@ -61,6 +54,8 @@ public class ElevatorIntro : MonoBehaviour
         animFadeIn.Play("IntroFadeIn");
         yield return new WaitForSeconds(1.5f);
         animElevatorDoors.Play("ElevatorDoorsIntroOpen");
+        aud.clip = elevatorOpenDoor;
+        aud.Play();
         yield return new WaitForSeconds(3.5f);
 
         player.GetComponent<PlayerMovement>().enabled = true;

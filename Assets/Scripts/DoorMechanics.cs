@@ -8,6 +8,10 @@ public class DoorMechanics : MonoBehaviour
 
     public GameObject player;
 
+    public bool openable;
+    public bool peekable;
+    public bool listenable;
+
     //DOOR OPENING AND CLOSING MECHANICS
     public Animator anim;
     public bool doorAnimating;

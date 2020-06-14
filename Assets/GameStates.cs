@@ -7,9 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameStates : MonoBehaviour
 {
     public static int state = 0;
-    public static bool peekingEnabled;
-    public static bool listeningEnabled;
-    public static bool knockingEnabled;
 
     public GameObject enemy;
     public GameObject doorKnocking;
@@ -18,7 +15,6 @@ public class GameStates : MonoBehaviour
     public DoorMechanics DoorA;
     public DoorMechanics DoorB;
     public AudioSource DoorAAudioTrigger;
-    public Animator PeekingText;
     public Camera CamDoorA;
     public Light LightEventA;
     public Animator EventADoorAnimator;
@@ -74,6 +70,20 @@ public class GameStates : MonoBehaviour
                         StartCoroutine(GameState1_2());
                     }
                     break;
+                case 2:
+                    if (LightEventA.enabled == true)
+                    {
+                        enemy.transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material.color = new Color(0.3f, 0.3f, 0.3f, 1);
+                        enemy.transform.GetChild(0).GetChild(1).GetComponent<SkinnedMeshRenderer>().material.color = new Color(0.3f, 0.3f, 0.3f, 1);
+                        enemy.transform.GetChild(0).GetChild(2).GetComponent<SkinnedMeshRenderer>().material.color = new Color(0.3f, 0.3f, 0.3f, 1);
+                    }
+                    else
+                    {
+                        enemy.transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material.color = Color.black;
+                        enemy.transform.GetChild(0).GetChild(1).GetComponent<SkinnedMeshRenderer>().material.color = Color.black;
+                        enemy.transform.GetChild(0).GetChild(2).GetComponent<SkinnedMeshRenderer>().material.color = Color.black;
+                    }
+                    break;
                 case 3:
                     state += 1; // becomes 4
                     GameState2();
@@ -100,20 +110,25 @@ public class GameStates : MonoBehaviour
 
     void GameState1_1()
     {
-        PeekingText.Play("InstructionsFadeIn");
-        peekingEnabled = true;
+        DoorA.peekable = true;
     }
 
     IEnumerator GameState1_2()
     {
-        LightEventA.intensity = 1;
-        LightEventA.GetComponent<Flickering>().enabled = true;
+        LightEventA.intensity = 3;
+        LightEventA.enabled = false;
         enemy.GetComponent<Animator>().Play("EnemyEvent1");
         yield return new WaitForSeconds(9);
         EventADoorAnimator.Play("OpenDoor");
-        yield return new WaitForSeconds(4);
+        LightEventA.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        LightEventA.enabled = false;
+        yield return new WaitForSeconds(3.9f);
         EventADoorAnimator.Play("CloseDoor");
         yield return new WaitForSeconds(4);
+        enemy.transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material.color = Color.white;
+        enemy.transform.GetChild(0).GetChild(1).GetComponent<SkinnedMeshRenderer>().material.color = Color.white;
+        enemy.transform.GetChild(0).GetChild(2).GetComponent<SkinnedMeshRenderer>().material.color = Color.white;
         enemy.SetActive(false);
         DoorB.locked = false;
         LightEventA.intensity = 5;
@@ -121,6 +136,7 @@ public class GameStates : MonoBehaviour
         LightEventA.enabled = true;
         doorKnocking.transform.position = DoorB.transform.position;
         doorKnocking.GetComponent<AudioSource>().Play();
+
         state += 1; //becomes 3
     }
 
