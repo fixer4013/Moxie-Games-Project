@@ -9,6 +9,7 @@ public class ElevatorIntro : MonoBehaviour
     public DimensionCamera cam;
 
     public AudioSource aud;
+    public AudioClip elevatorCloseDoor;
     public AudioClip elevatorSound;
     public AudioClip plingSound;
     public AudioClip elevatorOpenDoor;
@@ -43,9 +44,12 @@ public class ElevatorIntro : MonoBehaviour
 
     IEnumerator IntroElevator()
     {
+        aud.clip = elevatorCloseDoor;
+        aud.Play();
+        yield return new WaitForSeconds(5);
         aud.clip = elevatorSound;
         aud.Play();
-        yield return new WaitForSeconds(22.5f);
+        yield return new WaitForSeconds(17.5f);
         aud.clip = plingSound;
         aud.Play();
         

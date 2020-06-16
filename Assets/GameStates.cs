@@ -37,7 +37,7 @@ public class GameStates : MonoBehaviour
     public AudioSource EnemyFiddlingSound;
 
     //Part4
-    public Transform FetRoomCupboard;
+    public AudioSource doorKnockingFetRoom;
 
     void Awake()
     {
@@ -174,7 +174,7 @@ public class GameStates : MonoBehaviour
         DoorD.locked = true;
         DoorE.locked = true;
         DoorF.locked = true;
-        DoorD.DoorCloseAnimation();
+        StartCoroutine(DoorD.DoorCloseAnimation());
         yield return new WaitForSeconds(0.7f);
         DoorLockingSound.gameObject.transform.position = DoorF.gameObject.transform.position;
         DoorLockingSound.Play();
@@ -185,6 +185,7 @@ public class GameStates : MonoBehaviour
         DoorLockingSound.gameObject.transform.position = DoorD.gameObject.transform.position;
         DoorLockingSound.Play();
 
+        DoorE.peekable = true;
         yield return new WaitForSeconds(2);
         EnemyFiddlingSound.Play();
         enemy.SetActive(true);
@@ -206,8 +207,7 @@ public class GameStates : MonoBehaviour
 
     public void GameState4() //7
     {
-        doorKnocking.transform.position = FetRoomCupboard.position;
-        doorKnocking.GetComponent<AudioSource>().Play();
+        doorKnockingFetRoom.GetComponent<AudioSource>().Play();
         DoorF.locked = true;
         state += 1; //becomes 8
     }
