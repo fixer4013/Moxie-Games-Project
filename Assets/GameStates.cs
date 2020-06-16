@@ -38,6 +38,8 @@ public class GameStates : MonoBehaviour
 
     //Part4
     public AudioSource doorKnockingFetRoom;
+    public AudioSource doorFTrigger;
+    public Animator EndOfDemo;
 
     void Awake()
     {
@@ -93,6 +95,13 @@ public class GameStates : MonoBehaviour
                     {
                         DoorCKnockingGuide.gameObject.SetActive(false);
                         state += 1; //becomes 6
+                    }
+                    break;
+                case 9:
+                    if (doorFTrigger.isPlaying)
+                    {
+                        EndOfDemo.Play("EndOfDemo");
+                        state += 1; //becomes 10
                     }
                     break;
                 default:
